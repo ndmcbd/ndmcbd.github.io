@@ -50,10 +50,10 @@ body {
     background: var(--bg2);
     color: var(--wh);
     min-height: 100vh;
-    overflow-x: hidden;
     background-image: linear-gradient(rgba(131, 131, 134, 0) 29px, rgba(131, 131, 134, .05) 29px, rgba(131, 131, 134, .05) 30px), linear-gradient(90deg, rgba(131, 131, 134, 0) 29px, rgba(131, 131, 134, .05) 29px, rgba(131, 131, 134, .05) 30px);
     background-size: 30px 30px, 30px 30px;
     background-position: 0 0, 0 0;
+    overflow-x: hidden !important;
 }
 
 img {
@@ -359,7 +359,7 @@ p {
 
     .home_right img {
         max-width: 200px;
-        margin-bottom: -100px;
+        margin-bottom: -110px;
     }
 
     .home_left {
