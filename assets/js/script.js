@@ -54,3 +54,31 @@ function formatNumber(value, decimals) {
     let s = (+value).toLocaleString('en-US').split(".");
     return decimals ? s[0] + "." + ((s[1] || "") + "00000000").substr(0, decimals) : s[0];
 }
+
+$(document).scroll(function() {
+    if($(window).scrollTop() > 0) {
+        $('header').css({
+            'background' : 'linear-gradient(to bottom, rgba(11, 12, 12, 0.75) 0%, rgba(11, 12, 12, 0.3) 50%,  rgba(11, 12, 12, 0) 100%)',
+        });
+    }
+    else {
+        $('header').css({
+            'background' : 'transparent',
+            'backdrop-filter': 'none',
+        });
+        $('::-webkit-scrollbar').css({
+            'width' : '0px !important',
+        });
+    }
+});
+
+$(document).ready(function() {
+    $('.hamburger').click(function() {
+        $('.goto').toggleClass('open');
+        $('.goto li').toggleClass('fade');
+        $('.hamburger').toggleClass('toggle');
+    });
+}
+);
+
+
