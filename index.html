@@ -16,11 +16,11 @@
 
 <body>
 
-    <svg xmlns="https://www.w3.org/2000/svg" version="1.1" height="0">
+    <!-- <svg xmlns="https://www.w3.org/2000/svg" version="1.1" height="0">
         <filter id="blurFilter" width="110%" height="110%">
             <feGaussianBlur stdDeviation="5" result="blur" />
         </filter>
-    </svg>
+    </svg> -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -34,11 +34,17 @@
                 </div>
                 <ul class="goto">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Executives</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="about/">About</a></li>
+                    <li><a href="events/">Events</a></li>
+                    <li class="dropdown">
+                        <a href="executives/" class="dropdown-toggle" data-toggle="dropdown">Executives</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="executives/">Current</a></li>
+                            <li><a href="executives/former/">Former</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="gallery/">Gallery</a></li>
+                    <li><a href="contact/">Contact</a></li>
                 </ul>
             </div>
         </div>

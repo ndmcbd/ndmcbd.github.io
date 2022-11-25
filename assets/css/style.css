@@ -148,7 +148,7 @@ nav div div ul li {
 
 nav div div ul li a {
     text-decoration: none;
-    color: #9b139b;
+    color: #f2eefc;
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 3.2px;
@@ -180,10 +180,14 @@ nav {
     top: 0;
     left: 0;
     z-index: 9999;
-    background: rgba(20, 20, 26, 0.2);
-    backdrop-filter: url('#blurFilter');
-    -webkit-backdrop-filter: url('#blurFilter');
+    background: rgba(20, 20, 26, 1);
+    /* backdrop-filter: url('#blurFilter');
+    -webkit-backdrop-filter: url('#blurFilter'); */
 }
+
+/* .navr {
+    background: #736ae9 !important;
+} */
 
 .goto {
     margin: 0;
@@ -826,4 +830,25 @@ a:hover {
 .breadcrumb {
     margin-top: -55px;
     background: transparent;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+.dropdown-menu {
+    background: #252530;
+    padding: 10px 0;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.dropdown-menu a {
+    color: #f2eefc;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 5px 0;
+    display: block;
+    transition: background 0.3s ease-in-out;
 }
