@@ -143,15 +143,15 @@ p {
 nav div div ul li {
     list-style: none;
     display: inline-block;
-    padding: 0 20px
+    padding: 0 15px
 }
 
 nav div div ul li a {
     text-decoration: none;
     color: #f2eefc;
     text-transform: uppercase;
-    font-weight: 400;
-    letter-spacing: 3.2px;
+    font-weight: 300;
+    letter-spacing: 2px;
 }
 
 nav div div  ul li a:visited {
@@ -179,8 +179,8 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999;
-    background: rgba(20, 20, 26, 1);
+    z-index: 999999999;
+    /* background: #14141a; */
     /* backdrop-filter: url('#blurFilter');
     -webkit-backdrop-filter: url('#blurFilter'); */
 }
@@ -292,7 +292,7 @@ nav {
 }
 
 .about_section {
-    padding: 50px 0;
+    padding: 20px 0;
     background: linear-gradient(0deg, rgba(20,20,26,0) 0%, rgba(20,20,26,0.6) 20%, rgba(20,20,26,1) 50%, rgba(20,20,26,1) 60%, rgba(20,20,26,0) 100%);
     position: relative;
 }
@@ -302,13 +302,13 @@ nav {
 }
 
 .about_left {
-    margin: 10px 0 25px 0;
+    margin: 10px 20px 25px 0;
 }
 
 .about_left img {
     border-radius: 8px;
     width: 100%;
-    height: auto;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -347,8 +347,16 @@ nav {
     margin-bottom: 30px;
 }
 
+.mt-30 {
+    margin-top: 30px;
+}
+
 .mb-50 {
     margin-bottom: 50px;
+}
+
+.mt-50 {
+    margin-top: 50px;
 }
 
 .mb-100 {
@@ -380,6 +388,22 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
+
+    .about_left {
+        margin: 10px 0px 25px 0;
+    } 
+
+    .about_left img {
+        height: auto;
+        border: 1px solid #736ae96e;
+        border-radius: 20px !important;
+        padding: 3px;
+    }
+
+    .coun1bg {
+        border-radius: 20px !important;
+    }
+
     h1 {
         font-size: 2.6rem;
     }
@@ -452,7 +476,60 @@ nav {
         justify-content: center;
         align-items: center;
     }
+   
+    
+    .dropdown-menu {
+        margin-top: 5px !important;
+    }
+    
+    .dropdown-menu a {
+        font-size: 1.15rem !important;
+        font-weight: 400;
+        padding: 5px 0;
+    }
+    
 }
+
+
+@media screen and (max-width: 420px) {
+
+    .home_right img {
+        max-width: 120px;
+        margin-bottom: -50px;
+        margin-top: 50px;
+    }
+
+    .home p {
+        font-size: 1rem;
+    }
+    .home h1 {
+        font-size: 2.2rem;
+    }
+
+    .home .btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .goto li a{
+        font-size: 1.5rem;
+    }
+
+    .goto {
+        margin-top: -20px;
+    }
+
+    .dropdown-menu a {
+        font-size: 1.3rem !important;
+        padding-left: 10px !important;
+    }
+    .scrollDown {
+        display: none;
+    }
+    
+
+}
+
 
 @media screen and (max-width:980px) {
     nav {
@@ -495,38 +572,39 @@ nav {
     }
 
     .goto li:nth-child(1) {
-        transition: all .3s ease .2s
+        transition: all .15s ease .1s
     }
 
     .goto li:nth-child(2) {
-        transition: all .3s ease .4s
+        transition: all .15s ease .2s
     }
 
     .goto li:nth-child(3) {
-        transition: all .3s ease .6s
+        transition: all .15s ease .3s
     }
 
     .goto li:nth-child(4) {
-        transition: all .3s ease .7s
+        transition: all .15s ease .4s
     }
 
     .goto li:nth-child(5) {
-        transition: all .3s ease .8s
+        transition: all .15s ease .5s
     }
 
     .goto li:nth-child(6) {
-        transition: all .3s ease .9s;
+        transition: all .15s ease .6s;
         margin: 0
     }
 
     .goto li:nth-child(7) {
-        transition: all .3s ease 1s;
+        transition: all .15s ease .7s;
         margin: 0
     }
 
     li.fade {
         opacity: 1
     }
+
 
     /* [data-tooltip]:hover:after,
     [data-tooltip]:hover:before {
@@ -606,6 +684,10 @@ nav {
     text-align: center;
 }
 
+.counter_sec div div div {
+    gap: 20px;
+}
+
 .coun1bg::before {
     content: '';
     position: absolute;
@@ -618,7 +700,7 @@ nav {
     background: #826feba6;
     opacity: 1;
     z-index: -1;
-    filter: blur(70px);
+    filter: blur(50px);
 }
 .coun1bg {
     position: relative;
@@ -627,6 +709,8 @@ nav {
     background: #a8a8ca0c;
     padding: 20px 20px;
     border-radius: 10px;
+    max-width: 300px;
+    min-width: 200px;
     /* box-shadow: 0 0 10px 0 #826feb; */
 
 }
@@ -637,6 +721,7 @@ nav {
     background: #1c1c24;
     border: 1px solid #282829;
 }
+
 
 .card-body {
     padding: 10px 10px 20px 10px;
