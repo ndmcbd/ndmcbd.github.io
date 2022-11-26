@@ -22,14 +22,6 @@
     border-bottom-left-radius: 5px
 }
 
-/* body {
-    background-color: #121213;
-    min-height: 100vh;
-    background-image: linear-gradient(rgba(131, 131, 134, 0) 29px, rgba(131, 131, 134, .05) 29px, rgba(131, 131, 134, .05) 30px), linear-gradient(90deg, rgba(131, 131, 134, 0) 29px, rgba(131, 131, 134, .05) 29px, rgba(131, 131, 134, .05) 30px);
-    background-size: 30px 30px, 30px 30px;
-    background-position: 0 0, 0 0;
-} */
-
 :root {
     --gc: #786fef;
     --c1l: #736ae9;
@@ -181,13 +173,7 @@ nav {
     left: 0;
     z-index: 999999999;
     /* background: #14141a; */
-    /* backdrop-filter: url('#blurFilter');
-    -webkit-backdrop-filter: url('#blurFilter'); */
 }
-
-/* .navr {
-    background: #736ae9 !important;
-} */
 
 .goto {
     margin: 0;
@@ -202,8 +188,7 @@ nav {
     width: 100%;
     height: auto;
     object-fit: cover;
-    /* 3d transform */
-    transform: rotate3d(-1, 0.5, 0, 15deg);
+    /* transform: rotate3d(-1, 0.5, 0, 15deg); */
     transition: all 0.5s ease;
 }
 
@@ -211,7 +196,6 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* min-height: 100vh; */
     animation: pulseupanddown 4.5s cubic-bezier(.78, 1.19, .78, 1.19) infinite;
 }
 
@@ -233,7 +217,6 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* min-height: 100vh; */
 }
 
 .home_left p {
@@ -433,11 +416,7 @@ nav {
     }
 
     .home-sec {
-        display: flex;
-        /* justify-content: center;
-        align-items: center; */
-        /* flex-direction: column; */
-        
+        display: flex;        
     }
 
     .home_right img {
@@ -453,10 +432,6 @@ nav {
         text-align: justify;
         text-align-last: center;
     }
-
-    /* .scrollDown {
-        display: none;
-    } */
 
     .cen .row {
         display: flex;
@@ -605,12 +580,6 @@ nav {
         opacity: 1
     }
 
-
-    /* [data-tooltip]:hover:after,
-    [data-tooltip]:hover:before {
-        visibility: hidden;
-    } */
-
     header li {
         display: block;
         padding: 0px 20px;
@@ -711,8 +680,6 @@ nav {
     border-radius: 10px;
     max-width: 300px;
     min-width: 200px;
-    /* box-shadow: 0 0 10px 0 #826feb; */
-
 }
 
 .card {
@@ -770,7 +737,6 @@ nav {
 
 
 .card-img-top {
-    /* border: 1px solid #7c74eb; */
     padding: 6px;
     border-radius: 14px;
     height: 240px;
@@ -795,16 +761,6 @@ nav {
     text-align: center;
 }
 
-/* .splash2 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 250px;
-    height: 150px;
-    background: #403b8b;
-    filter: blur(120px);
-    animation: splash 10s infinite linear alternate;
-} */
 
 @keyframes splash {
     0% {
