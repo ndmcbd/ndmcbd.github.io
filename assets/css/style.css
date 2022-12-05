@@ -289,7 +289,10 @@ nav {
 .about_left img {
     border-radius: 8px;
     width: 100%;
-    height: 300px;
+    max-height: 300px;
+}
+
+.covimg {
     object-fit: cover;
 }
 
@@ -707,8 +710,11 @@ nav {
 .card {
     margin-bottom: 30px;
     padding: 10px;
-    background: #1c1c24;
-    border: 1px solid #282829;
+    background: #3737473f;
+    border: 0.5px solid #f2eefc17;
+    border-radius: 25px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 
@@ -963,30 +969,18 @@ a:focus-visible {
     padding-top: 10px;
     border-radius: 25px;
     padding: 10px;
-    background: #2a2a35a4;
+    background: #2a2a353f;
+    border: 0.5px solid #f2eefc17;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: transform 0.3s ease-in-out;
 }
 
 .exec-prof:hover {
-    background: #2a2a35da;
+    background: #2a2a3596;
+    transform: translateY(-5px);
 }
 
-.exec-prof:hover .exec-img img {
-    animation: takeiteasy 3.5s cubic-bezier(.78, 1.19, .78, 1.19) infinite;
-}
-
-@keyframes takeiteasy {
-    0% {
-        transform: translate3d(0, 0px, 0);
-    }
-
-    50% {
-        transform: translate3d(0, -2px, 0);
-    }
-
-    100% {
-        transform: translate3d(0, 0px, 0);
-    }
-}
 
 .exec-img img {
     border-radius: 15px;
@@ -1257,6 +1251,7 @@ textarea:focus {
     color: #f2eefc;
     font-weight: 500;
     font-size: 1.03rem;
+    border: none;
     outline: none;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
