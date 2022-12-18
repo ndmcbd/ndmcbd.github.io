@@ -91,19 +91,27 @@
                                                 </div>
 
                                                 <div class="col-md-6">
-                                                    <input type="text" name="school" placeholder="Previous School" required>
-                                                </div>
-
-                                                <div class="col-md-6">
                                                     <input type="number" name="contact" placeholder="Contact Number" required>
+                                                </div>
+                                                
+                                                <div class="col-md-6">
+                                                    <input type="number" name="gcontact" placeholder="Guardian's Contact Number" required>
                                                 </div>
 
                                                 <div class="col-md-6">
                                                     <input type="email" name="email" placeholder="Email" required>
                                                 </div>
-
+                                                
                                                 <div class="col-md-6">
                                                     <input type="text" name="address" placeholder="Address" required>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <input type="text" name="school" placeholder="Previous School" required>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <input type="url" name="image" placeholder="Formal Picture (Drive Link)" required>
                                                 </div>
                                                 
                                                 <div class="col-md-6">
@@ -128,23 +136,26 @@
                                         subbtn.innerHTML = "Registered";
                                         subbtn.style.opacity = "0.5";
                                         subbtn.style.transition = "all 0.5s ease-in-out";
-
                                         var name = document.getElementsByName("name")[0].value;
                                         var roll = document.getElementsByName("roll")[0].value;
-                                        var school = document.getElementsByName("school")[0].value;
                                         var contact = document.getElementsByName("contact")[0].value;
+                                        var gcontact = document.getElementsByName("gcontact")[0].value;
                                         var email = document.getElementsByName("email")[0].value;
                                         var address = document.getElementsByName("address")[0].value;
+                                        var school = document.getElementsByName("school")[0].value;
+                                        var image = document.getElementsByName("image")[0].value;
                                         var interest = document.getElementsByName("interest")[0].value;
                                         var experience = document.getElementsByName("experience")[0].value;
 
                                         var data = {
                                             name: name,
                                             roll: roll,
-                                            school: school,
                                             contact: contact,
+                                            gcontact: gcontact,
                                             email: email,
                                             address: address,
+                                            school: school,
+                                            image: image,
                                             interest: interest,
                                             experience: experience
                                         };
