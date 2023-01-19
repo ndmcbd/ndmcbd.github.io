@@ -1,0 +1,74 @@
+[
+    {
+        "event_title": "1st Notre Dame Math Festival - 2018",
+        "event_date": "19 JAN 2018",
+        "event_cover": "assets/img/events/01.jpg",
+        "event_link": "https://www.facebook.com/events/168803663888019/"
+    },
+    {   
+        "event_title": "Intra-College Mathematical Poster Designing Competition'18",
+        "event_date": "8 FEB 2018",
+        "event_cover": "assets/img/events/02.jpg",
+        "event_link": "https://www.facebook.com/events/2172949862723150/"
+    },
+    {
+        "event_title": "Freshers' Reception - 2018",
+        "event_date": "1 AUG 2018",
+        "event_cover": "assets/img/events/03.jpg",
+        "event_link": "https://www.facebook.com/events/184529182419484/"
+    },
+    {
+        "event_title": "IUB presents The 2nd Notre Dame Math Festival 2018",
+        "event_date": "12 OCT 2018",
+        "event_cover": "assets/img/events/04.jpg",
+        "event_link": "https://www.facebook.com/events/1511173878982736/"
+    },
+    {
+        "event_title": "The Exponent Continuum",
+        "event_date": "27 AUG 2020",
+        "event_cover": "assets/img/events/05.jpg",
+        "event_link": "https://www.facebook.com/events/618436065522674/"
+    },
+    {
+        "event_title": "Notre Dame Math Club presents Intra-College Math Olympiad",
+        "event_date": "5 MAR 2021",
+        "event_cover": "assets/img/events/06.jpg",
+        "event_link": "https://www.facebook.com/events/417678839494421/"
+    },
+    {
+        "event_title": "Euclid's Apprentice",
+        "event_date": "11 JUL 2021",
+        "event_cover": "assets/img/events/07.jpg",
+        "event_link": "https://www.facebook.com/events/329710591946758/"
+    },
+    {
+        "event_title": "\"The Exponent Continuum 2.0\" powered by iXora Solution Ltd.",
+        "event_date": "29 OCT 2021",
+        "event_cover": "assets/img/events/08.jpg",
+        "event_link": "https://www.facebook.com/events/912308609389794/"
+    },
+    {
+        "event_title": "NDMC Presents Intra Math Olympiad - 2022",
+        "event_date": "30 MAR 2022",
+        "event_cover": "assets/img/events/09.jpg",
+        "event_link": "https://www.facebook.com/events/748650872785476/"
+    },
+    {
+        "event_title": "2nd Intra Math Olympiad by NDMC - 2022",
+        "event_date": "29 JUN 2022",
+        "event_cover": "assets/img/events/10.jpg",
+        "event_link": "https://www.facebook.com/events/1152533518926189/"
+    },
+    {
+        "event_title": "1st Intra Speed-Cubing Contest",
+        "event_date": "31 AUG 2022",
+        "event_cover": "assets/img/events/11.jpg",
+        "event_link": "https://www.facebook.com/events/1722300314813666/"
+    },
+    {
+        "event_title": "Intra Math Festival 2022 - Winter Season",
+        "event_date": "2 NOV 2022",
+        "event_cover": "assets/img/events/12.jpg",
+        "event_link": "https://www.facebook.com/events/507018114676946/"
+    }
+]

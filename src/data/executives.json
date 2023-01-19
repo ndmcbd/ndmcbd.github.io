@@ -1,0 +1,116 @@
+[
+    {
+        "session": "2017",
+        "executives": [
+            "Hypothesis;;Inan Marshad",
+            "Graphing;;Tanjeem Azwad Zaman",
+            "Projection;;Syed Safayat Ahmed",
+            "Projection;;Md. Faruk Jamil",
+            "Mapping;;Md. Muktadir Anik",
+            "Proof;;Thanic Noor Samin",
+            "Logic;;Sayed Md. Sameer Faiyaz",
+            "Operator 1;;Md. Moin Khan",
+            "Operator 2;;Foysal Khan",
+            "Operator 3;;Md Nazmul Hasan Nahid",
+            "Mapping;;Kamal Tafsir Raiyan",
+            "Abacus;;Md Foysal Khandokar"
+        ]
+    },
+    {
+        "session": "2018",
+        "executives": [
+            "Hypothesis;Administration & Planning;Anindya Kishore Choudhury",
+            "Graphing;Publications;Md. Ashrafur Rahman Khan",
+            "Projection;Graphics & Designing;Wasif Jalal",
+            "Abacus;Creative Committee;Asif Iqbal Apurba",
+            "Proof;Olympiad;Saad Bin Quddus",
+            "Proof;Olympiad;Mashroor Hasan Bhuiyan",
+            "Relation;Public Relations;Ahad Bin Islam Shoeb",
+            "Projection;Graphics & Designing;Amiyo Krishnomurti Saha",
+            "Proof;Olympiad;Md. Rifat Rahman",
+            "Field;Field Work;Minhaz Ahmed",
+            "Proof;Olympiad;Omar Sayeed Saimum",
+            "Relation;Public Relations;Mir Muhammad Omayer",
+            "Field;Field Work;Ismail Hossain Maruf",
+            "Voluntary Executive;;Samin Yasar",
+            "Coordinator;HR & Co-ordination;Ahan Chakrabortty",
+            "Coordinator;HR & Co-ordination;Md. Sajidur Rahman"
+        ]
+    },
+    {
+        "session": "2019",
+        "executives": [
+            "Hypothesis;Administration & Planning;Muhammad Sadnam Faiyaz",
+            "Coordinator;HR & Co-ordination;Sadman Sakib Himel",
+            "Relation;Public Relations;Rafiul Islam",
+            "Projection;Graphics & Designing;Sabbir Ahmed",
+            "Graphing;Publications;Yafiz ibn Rahman",
+            "Abacus;Creative Committee;Raiyan Jamil",
+            "Abacus;Creative Committee;Joy Chakraborty",
+            "Field;Field Work;BM Ruhul Amin Ashik",
+            "Proof;Olympiad;Tasmeem Reza",
+            "Proof;Olympiad;Zim Mim Siddiqee",
+            "Proof;Olympiad;Gourab Jit Biswas",
+            "Proof;Olympiad;Rafi Mahmud",
+            "Proof;Olympiad;Anik Saha",
+            "Co-efficient;Voluntary Executive;Kazi Zawad Hossein",
+            "Co-efficient;Voluntary Executive;Yusuf Islam Siam",
+            "Co-efficient;Voluntary Executive;Khairul Islam",
+            "Co-efficient;Voluntary Executive;Imtiaz Tanweer Rahman",
+            "Co-efficient;Voluntary Executive;Rahul Fekir",
+            "Co-efficient;Voluntary Executive;Nokib Sorkar",
+            "Co-efficient;Voluntary Executive;Fahim Farhan"
+        ]
+    },
+    {
+        "session": "2020",
+        "executives": [
+            "Hypothesis;Administration & Planning;Anindya Guha",
+            "Coordinator;HR & Co-ordination;Muhaiminul Islam Ninad",
+            "Relation;Public Relations;Mashroor Hossain",
+            "Relation;Public Relations;Siratim Mustakim",
+            "Projection;Graphics & Designing;Imtiaz Uddin",
+            "Graphing;Publications;Ismail Khan",
+            "Graphing;Publications;Dibya Jyoti Sarkar",
+            "Abacus;Creative Committee;Niloy Kumar Mondal",
+            "Abacus;Creative Committee;Arman Ferdous",
+            "Field;Field Work;Farhan Muhammad Rafi Kamal",
+            "Field;Field Work;Hassan Mohammed Naquibul Hoque",
+            "Proof;Olympiad;Sreetanu Bhowmik",
+            "Proof;Olympiad;Kazi Ahnaf Abdullah Saad",
+            "Proof;Olympiad;Rafat Kabir",
+            "Proof;Olympiad;Shuvodip Dey",
+            "Proof;Olympiad;Alamin Hossain"
+        ]
+    },
+    {
+        "session": "2021",
+        "executives": [
+            "General Secretary;Administration & Planning;Sharif Bin Haque;https://www.facebook.com/sharifbinhaque",
+            "President;Administration & Planning;Mohammed Mehedi Hassan;",
+            "President;Public Relations & Field Works;Md. Nadir-Uz-Zaman Naef;https://www.facebook.com/mdnadiruzzaman.naef.5?mibextid=ZbWKwL",
+            "President;Publication & Graphics;Jotirmoy Sarker;https://www.facebook.com/profile.php?id=100082103870537&mibextid=ZbWKwL",
+            "President;Olympiad;Ashraful Islam Fahim;",
+            "President;IT;Saom Bin Khaled;",
+            "Vice-President;Public Relations & Field Works;Rawnak Mubtasim Rafid;https://www.facebook.com/rawnakmubtasim.rafid.9",
+            "Vice-President;Public Relations & Field Works;Farhan Mahtab;https://www.facebook.com/farhan.mahtab.393",
+            "Vice-President;Publication & Graphics;Raktim Argha;",
+            "Vice-President;Publication & Graphics;Shafin Zaman George;",
+            "Vice-President;Olympiad;Md. Mushfiqur Rahman;https://www.facebook.com/md.mrrafi.94064?mibextid=ZbWKwL",
+            "Vice-President;Olympiad;Nahian Amin;",
+            "Vice-President;Olympiad;Nazmus Sakib;",
+            "Vice-President;Olympiad;Abu Zafar Mohammad Saleh;https://www.facebook.com/creep.creep12",
+            "Vice-President;IT;A. M Farhan Ishrak;",
+            "Secretary;Public Relations & Field Works;Muhi Uddin Rafat;https://www.facebook.com/rafat.muhiuddin.2003",
+            "Secretary;Public Relations & Field Works;Md. Monowar Jahid Shourov;https://www.facebook.com/mdmonowarjahid.shourov?mibextid=ZbWKwL",
+            "Secretary;Publication & Graphics;Kamruzzaman Saddam;https://www.facebook.com/kamruzzaman.saddam.56?mibextid=ZbWKwL",
+            "Secretary;Publication & Graphics;Dhrubo Jyoti Das;",
+            "Secretary;Olympiad;Tahmid Hamim Chowdhury;",
+            "Secretary;Olympiad;Adnan Sadik;",
+            "Secretary;Olympiad;Arjo Kar;",
+            "Secretary;Olympiad;Ahmed Saad Sabit;",
+            "Secretary;Olympiad;Fahim Faiaz Adib;https://www.facebook.com/fahim.adib.35/",
+            "Photography Secretary;Public Relations & Field Works;Ahnaf Mahmud Khan Shafriz;"
+        ]
+    }
+]
