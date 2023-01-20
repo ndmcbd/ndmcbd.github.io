@@ -39,7 +39,7 @@ const Executives = () => {
                                     <div className="exprcs exec-prof">
                                         <div className="exec-img">
                                             <img
-                                            src="./ndmcbd/assets/img/executives/Dr. Fr. Hemanto Pius Rozario.jpg"
+                                            src="./assets/img/executives/Dr. Fr. Hemanto Pius Rozario.jpg"
                                             onError={({ currentTarget })=> { currentTarget.onerror = null; currentTarget.src="assets/img/executives/def.jpg"; }}
                                             width="100%" alt="executive" loading="lazy" className="lazydumb" />
                                         </div>
@@ -61,7 +61,7 @@ const Executives = () => {
                                     <div className="exprcs exec-prof">
                                     <div className="exec-img">
                                         <img
-                                        src="./ndmcbd/assets/img/executives/Md. Azizur Rahman.jpg"
+                                        src="./assets/img/executives/Md. Azizur Rahman.jpg"
                                         onError={({ currentTarget })=> { currentTarget.onerror = null; currentTarget.src="assets/img/executives/def.jpg"; }}
                                         width="100%" alt="executive" loading="lazy" className="lazydumb" />
                                     </div>
@@ -83,7 +83,7 @@ const Executives = () => {
                                     <div className="exprcs exec-prof">
                                     <div className="exec-img">
                                         <img
-                                        src="./ndmcbd/assets/img/executives/Md. Rezaul Karim.jpg"
+                                        src="./assets/img/executives/Md. Rezaul Karim.jpg"
                                         onError={({ currentTarget })=> { currentTarget.onerror = null; currentTarget.src="assets/img/executives/def.jpg"; }}
                                         width="100%" alt="executive" loading="lazy" className="lazydumb" />
                                     </div>
@@ -128,7 +128,7 @@ const Executives = () => {
                                                                 <div className="exec-img">
                                                                     <img
                                                                         src={
-                                                                            "./ndmcbd/assets/img/executives/"+ execInfo[2] +".jpg"
+                                                                            "./assets/img/executives/"+ execInfo[2] +".jpg"
                                                                         }
                                                                         onError={({ currentTarget }) => {
                                                                             currentTarget.onerror = null;

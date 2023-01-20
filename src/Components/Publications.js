@@ -53,7 +53,7 @@ const About = () => {
                         </div>
                         <div class="col-md-9 plane text-center">
                             <a href="../assets/img/publications/ThePlaneRight.png">
-                                <img class="planeL" src={process.env.PUBLIC_URL + "/assets/img/publications/ThePlaneRight.png"} alt="The Plane (Left)" />
+                                <img class="planeR" src={process.env.PUBLIC_URL + "/assets/img/publications/ThePlaneRight.png"} alt="The Plane (Left)" />
                             </a>
                         </div>
                 </div>
@@ -73,7 +73,7 @@ const About = () => {
                     <div className="col-md-3 text-right btnmo">
                         <Link
                             tabIndex="-1"
-                            to="../executives"
+                            to="../contact"
                             className="btn btn-primary"
                         >
                             Contact Us{" "}

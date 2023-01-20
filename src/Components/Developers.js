@@ -31,7 +31,7 @@ const Executives = () => {
                                 <div className="devbody card-body">
                                     <div className="devc row">
                                         <div className="col-md-5">
-                                            <img src="./ndmcbd/assets/img/dev/bokaif.jpg" alt="Badruddoza Kaif" className="img-fluid" />
+                                            <img src="./assets/img/dev/bokaif.jpg" alt="Badruddoza Kaif" className="img-fluid" />
                                         </div>
                                         <div className="col-md-7">
                                             <h3>Badruddoza Kaif</h3>
@@ -54,7 +54,7 @@ const Executives = () => {
                                 <div className="devbody card-body">
                                     <div className="devc row">
                                         <div className="col-md-5">
-                                            <img src="./ndmcbd/assets/img/dev/soumya.jpg" alt="Soumya Mahbub" className="img-fluid" />
+                                            <img src="./assets/img/dev/soumya.jpg" alt="Soumya Mahbub" className="img-fluid" />
                                         </div>
                                         <div className="col-md-7">
                                             <h3>Soumya Mahbub</h3>
