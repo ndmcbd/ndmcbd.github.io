@@ -142,8 +142,41 @@ const Home = () => {
                     <h1>EVENTS</h1>
                 </div>
                 <div className="mwt row">
+
+                <div
+                                className="col-md-4 col-sm-6"
+                                data-aos="zoom-in-up"
+                            >
+                                <div className="card upcoming">
+                                    <div className="upcom">Upcoming</div>
+                                    <img
+                                        src="assets/img/events/3rdNDMC2023.jpg"
+                                        className="card-img-top"
+                                        alt="..."
+                                    />
+                                    <div className="card-body">
+                                        <h5 className="card-title">
+                                            <i className="fa-regular fa-calendar"></i>
+                                            02-04 MAR 2023
+                                        </h5>
+                                        <p className="card-text">
+                                            3rd Annual Notre Dame Math Festival 2023
+                                        </p>
+                                        <Link
+                                            tabIndex="-1"
+                                            to="../register"
+                                            rel="noreferrer"
+                                            className="cstbtn upcoming"
+                                        >
+                                            Register{" "}
+                                            <i className="fa-thin fa-arrow-up-right-from-square"></i>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+
                                 {
-                                    EventsJSON && EventsJSON.slice(-3).reverse().map((event, idx) => {
+                                    EventsJSON && EventsJSON.slice(-2).reverse().map((event, idx) => {
                                         return(
                                             <div
                                                 className="col-md-4 col-sm-6"

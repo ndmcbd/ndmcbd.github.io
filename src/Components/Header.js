@@ -25,6 +25,14 @@ const Header = () => {
 				});
 			}
 		});
+        // document load event
+        $(document).ready(() => {
+            if(pathname.includes('events') || pathname.includes('register')) {
+                $('.upEventModal').css({
+                    'display' : 'none',
+                });
+            }
+        });
 	}, [])
     const drawerToggle = () => {
         $('.hamburger').click(() => {
@@ -38,7 +46,22 @@ const Header = () => {
         $('.goto li').removeClass('fade');
         $('.hamburger').removeClass('toggle');
     }
+    
+    $('#closeUpEvent').click(() => {
+        $('.upEventModal').css({
+            'display' : 'none',
+        });
+    });
+
+    $(document).click((e) => {
+        if((e.target.className !== 'upEventModal') && ($('.upEventModal').css('display') !== 'none')){
+            $('.upEventModal').css({
+                'display' : 'none',
+            });
+        }
+    });
     return (
+        <div>
         <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
             <div className="container">
                 <a tabIndex="-1" className="navbar-brand" href="#">
@@ -117,6 +140,38 @@ const Header = () => {
                 </div>
             </div>
         </nav>
+        <div className="upEventModal">
+                <div className="D1">
+                    <div className="card upcoming">
+                        <i className="fa-thin fa-xmark" id="closeUpEvent"></i>
+                        <div className="upcom">Upcoming</div>
+                        <img
+                            src="assets/img/events/3rdNDMC2023.jpg"
+                            className="card-img-top"
+                            alt="..."
+                        />
+                        <div className="card-body">
+                            <h5 className="card-title">
+                                <i className="fa-regular fa-calendar"></i>
+                                02-04 MAR 2023
+                            </h5>
+                            <p className="card-text">
+                                3rd Annual Notre Dame Math Festival 2023
+                            </p>
+                            <Link
+                                tabIndex="-1"
+                                to="../register"
+                                rel="noreferrer"
+                                className="cstbtn upcoming"
+                            >
+                                Register{" "}
+                                <i className="fa-thin fa-arrow-up-right-from-square"></i>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 };
 
