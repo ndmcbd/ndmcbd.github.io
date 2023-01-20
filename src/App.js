@@ -14,6 +14,7 @@ import Executives from "./Components/Executives";
 import { useLocation } from "react-router-dom";
 import FormerExectuives from "./Components/FormerExectuives";
 import Gallery from "./Components/Gallery";
+import Register from "./Components/Register";
 import Solo from "./Components/Solo";
 import Developers from "./Components/Developers";
 import $ from 'jquery';
@@ -68,6 +69,7 @@ function App() {
                 <Route path="gallery" element={<Gallery />} />
                 <Route path="executives" element={<Executives />} />
                 <Route path="executives/former" element={<FormerExectuives />} />
+                <Route path="register" element={<Register />} />
                 <Route path="register/solo" element={<Solo />} />
                 <Route path="register/team" element={<Team />} />
                 <Route path="register/ca" element={<Ca />} />

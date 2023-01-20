@@ -30,7 +30,8 @@ const Solo = () => {
         var contact = document.getElementsByName("phone")[0].value;
         var institution = document.getElementsByName("institution")[0].value;
         var classNo = document.getElementsByName("class")[0].value;
-        var roll = document.getElementsByName("roll")[0].value;
+        // var roll = document.getElementsByName("roll")[0].value;
+        var reference = document.getElementsByName("reference")[0].value;
         var transactionId = document.getElementsByName("trnxID")[0].value;
         var moneyNumber = document.getElementsByName("money_sending_number")[0]
             .value;
@@ -41,7 +42,8 @@ const Solo = () => {
             contact: contact,
             institution: institution,
             classNo: classNo,
-            roll: roll,
+            // roll: roll,
+            reference: reference,
             transactionId: transactionId,
             moneyNumber: moneyNumber,
         };
@@ -55,7 +57,7 @@ const Solo = () => {
         notify();
 
         setTimeout(function () {
-            alert("Thank you for registering. We will contact you soon.");
+            // alert("Thank you for registering. We will contact you soon.");
             document.getElementById("mem_form").reset();
             subbtn.innerHTML = "Register";
             subbtn.style.opacity = "1";
@@ -90,8 +92,13 @@ const Solo = () => {
                             Home
                         </Link>
                     </li>
+                    <li className="breadcrumb-item" aria-current="page">
+                        <Link tabIndex="-1" to="../register/">
+                            Register
+                        </Link>
+                    </li>
                     <li className="breadcrumb-item active" aria-current="page">
-                        Register
+                        Solo
                     </li>
                 </ol>
             </section>
@@ -100,6 +107,11 @@ const Solo = () => {
                     <div className="content row">
                         <div className="col-md-12">
                             <div className="mwt row">
+                                <div className="switch_reg text-center">
+                                    <Link to="../register/solo" className="typeact">
+                                        Solo
+                                    </Link>
+                                </div>
                                 <div
                                     className="col-md-12 col-sm-12"
                                     data-aos="zoom-in-up"
@@ -154,15 +166,6 @@ const Solo = () => {
                                                     <span>01911958720</span>
                                                 </h4>
                                             </div>
-                                            <Link to="../register/solo">
-                                                Solo&nbsp;
-                                            </Link>
-                                            <Link to="../register/team">
-                                                Team&nbsp;
-                                            </Link>
-                                            <Link to="../register/ca">
-                                                Campus Ambassador
-                                            </Link>
                                             <div className="col-md-12">
                                                 <div className="row contform">
                                                     <div className="col-md-6">
@@ -183,10 +186,13 @@ const Solo = () => {
                                                     </div>
                                                     <div className="col-md-6">
                                                         <input
-                                                            type="number"
+                                                            type="text"
                                                             name="phone"
                                                             placeholder="Contact Number"
                                                             required
+                                                            maxLength="13"
+                                                            minLength="11"
+                                                            pattern="8801[0-9]{9}|01[0-9]{9}"
                                                         />
                                                     </div>
                                                     <div className="col-md-6">
@@ -205,7 +211,7 @@ const Solo = () => {
                                                             required
                                                         />
                                                     </div>
-                                                    <div className="col-md-6">
+                                                    {/* <div className="col-md-6">
                                                         <input
                                                             type="text"
                                                             name="roll"
@@ -213,11 +219,12 @@ const Solo = () => {
                                                             required
                                                         />
                                                     </div>
-                                                    <div className="col-md-12 d-flex align-items-center justify-content-center">
-                                                        <hr
-                                                            width="15%"
-                                                            size="1"
-                                                            color="#fff"
+                                                    <div className="col-md-6"></div> */}
+                                                    <div className="col-md-6">
+                                                        <input
+                                                            type="text"
+                                                            name="reference"
+                                                            placeholder="Reference Code (if any)"
                                                         />
                                                     </div>
                                                     <div className="col-md-6">
@@ -230,10 +237,13 @@ const Solo = () => {
                                                     </div>
                                                     <div className="col-md-6">
                                                         <input
-                                                            type="number"
+                                                            type="text"
                                                             name="money_sending_number"
                                                             placeholder="Money Sending Number"
                                                             required
+                                                            maxLength="13"
+                                                            minLength="11"
+                                                            pattern="8801[0-9]{9}|01[0-9]{9}"
                                                         />
                                                     </div>
                                                     <div className="col-md-12">

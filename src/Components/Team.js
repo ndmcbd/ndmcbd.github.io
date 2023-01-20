@@ -29,7 +29,8 @@ const Team = () => {
         var contact = document.getElementsByName("phone")[0].value;
         var institution = document.getElementsByName("institution")[0].value;
         var classNo = document.getElementsByName("class")[0].value;
-        var roll = document.getElementsByName("roll")[0].value;
+        // var roll = document.getElementsByName("roll")[0].value;
+        var reference = document.getElementsByName("reference")[0].value;
         var transactionId = document.getElementsByName("trnxID")[0].value;
         var moneyNumber = document.getElementsByName("money_sending_number")[0]
             .value;
@@ -52,27 +53,44 @@ const Team = () => {
             contact: contact,
             institution: institution,
             classNo: classNo,
-            roll: roll,
+            // roll: roll,
+            reference: reference,
             transactionId: transactionId,
             moneyNumber: moneyNumber,
-            tm_1 : {
-                name: tm_1_name,
-                email: tm_1_email,
-                phone: tm_1_phone,
-                institution: tm_1_institution,
-            },
-            tm_2 : {
-                name: tm_2_name,
-                email: tm_2_email,
-                phone: tm_2_phone,
-                institution: tm_2_institution,
-            },
-            tm_3 : {
-                name: tm_3_name,
-                email: tm_3_email,
-                phone: tm_3_phone,
-                institution: tm_3_institution,
-            },
+
+            nameMember01: tm_1_name,
+            emailMember01: tm_1_email,
+            phoneMember01: tm_1_phone,
+            institutionMember01: tm_1_institution,
+
+            nameMember02: tm_2_name,
+            emailMember02: tm_2_email,
+            phoneMember02: tm_2_phone,
+            institutionMember02: tm_2_institution,
+
+            nameMember03: tm_3_name,
+            emailMember03: tm_3_email,
+            phoneMember03: tm_3_phone,
+            institutionMember03: tm_3_institution,
+            // tm_1 : {
+            //     name: tm_1_name,
+            //     email: tm_1_email,
+            //     phone: tm_1_phone,
+            //     institution: tm_1_institution,
+            // },
+            // tm_2 : {
+            //     name: tm_2_name,
+            //     email: tm_2_email,
+            //     phone: tm_2_phone,
+            //     institution: tm_2_institution,
+            // },
+            // tm_3 : {
+            //     name: tm_3_name,
+            //     email: tm_3_email,
+            //     phone: tm_3_phone,
+            //     institution: tm_3_institution,
+            // },
+
         };
         const ref = collection(firestore, "team_participants"); // Firebase creates this automatically
         try {
@@ -84,7 +102,7 @@ const Team = () => {
         notify();
 
         setTimeout(function () {
-            alert("Thank you for registering. We will contact you soon.");
+            // alert("Thank you for registering. We will contact you soon.");
             document.getElementById("mem_form").reset();
             subbtn.innerHTML = "Register";
             subbtn.style.opacity = "1";
@@ -119,8 +137,13 @@ const Team = () => {
                             Home
                         </Link>
                     </li>
+                    <li className="breadcrumb-item" aria-current="page">
+                        <Link tabIndex="-1" to="../register/">
+                            Register
+                        </Link>
+                    </li>
                     <li className="breadcrumb-item active" aria-current="page">
-                        Register
+                        Team
                     </li>
                 </ol>
             </section>
@@ -129,6 +152,11 @@ const Team = () => {
                     <div className="content row">
                         <div className="col-md-12">
                             <div className="mwt row">
+                                <div className="switch_reg text-center">
+                                    <Link to="../register/team" className="typeact">
+                                        Team
+                                    </Link>
+                                </div>
                                 <div
                                     className="col-md-12 col-sm-12"
                                     data-aos="zoom-in-up"
@@ -185,11 +213,9 @@ const Team = () => {
                                                     <span>01911958720</span>
                                                 </h4>
                                             </div>
-                                            <Link to="../register/solo">Solo&nbsp;</Link>
-                                            <Link to="../register/team">Team&nbsp;</Link>
-                                            <Link to="../register/ca">Campus Ambassador</Link>
                                             <div className="col-md-12">
                                                 <div className="row contform">
+                                                <h3><span>&mdash; </span>Team Leader</h3>
                                                     <div className="col-md-6">
                                                         <input
                                                             type="text"
@@ -208,10 +234,13 @@ const Team = () => {
                                                     </div>
                                                     <div className="col-md-6">
                                                         <input
-                                                            type="number"
+                                                            type="text"
                                                             name="phone"
                                                             placeholder="Contact Number"
                                                             required
+                                                            maxLength="13"
+                                                            minLength="11"
+                                                            pattern="8801[0-9]{9}|01[0-9]{9}"
                                                         />
                                                     </div>
                                                     <div className="col-md-6">
@@ -233,13 +262,12 @@ const Team = () => {
                                                     <div className="col-md-6">
                                                         <input
                                                             type="text"
-                                                            name="roll"
-                                                            placeholder="Roll"
-                                                            required
+                                                            name="reference"
+                                                            placeholder="Reference Code (if any)"
                                                         />
                                                     </div>
 
-                                                    <h3>Team Member 1</h3>
+                                                    <h3><span>&mdash; </span>Team Member 1</h3>
                                                     <div className="col-md-6">
                                                         <input
                                                             type="text"
@@ -258,10 +286,13 @@ const Team = () => {
                                                     </div>
                                                     <div className="col-md-6">
                                                         <input
-                                                            type="number"
                                                             name="tm_1_phone"
                                                             placeholder="Contact Number"
                                                             required
+                                                            type="text"
+                                                            maxLength="13"
+                                                            minLength="11"
+                                                            pattern="8801[0-9]{9}|01[0-9]{9}"
                                                         />
                                                     </div>
                                                     <div className="col-md-6">
@@ -272,7 +303,7 @@ const Team = () => {
                                                             required
                                                         />
                                                     </div>
-                                                    <h3>Team Member 2</h3>
+                                                    <h3><span>&mdash; </span>Team Member 2</h3>
                                                     <div className="col-md-6">
                                                         <input
                                                             type="text"
@@ -291,10 +322,13 @@ const Team = () => {
                                                     </div>
                                                     <div className="col-md-6">
                                                         <input
-                                                            type="number"
                                                             name="tm_2_phone"
                                                             placeholder="Contact Number"
                                                             required
+                                                            type="text"
+                                                            maxLength="13"
+                                                            minLength="11"
+                                                            pattern="8801[0-9]{9}|01[0-9]{9}"
                                                         />
                                                     </div>
                                                     <div className="col-md-6">
@@ -305,7 +339,7 @@ const Team = () => {
                                                             required
                                                         />
                                                     </div>
-                                                    <h3>Team Member 3</h3>
+                                                    <h3><span>&mdash; </span>Team Member 3</h3>
                                                     <div className="col-md-6">
                                                         <input
                                                             type="text"
@@ -324,10 +358,13 @@ const Team = () => {
                                                     </div>
                                                     <div className="col-md-6">
                                                         <input
-                                                            type="number"
                                                             name="tm_3_phone"
                                                             placeholder="Contact Number"
                                                             required
+                                                            type="text"
+                                                            maxLength="13"
+                                                            minLength="11"
+                                                            pattern="8801[0-9]{9}|01[0-9]{9}"
                                                         />
                                                     </div>
                                                     <div className="col-md-6">
@@ -338,13 +375,7 @@ const Team = () => {
                                                             required
                                                         />
                                                     </div>
-                                                    <div className="col-md-12 d-flex align-items-center justify-content-center">
-                                                        <hr
-                                                            width="15%"
-                                                            size="1"
-                                                            color="#fff"
-                                                        />
-                                                    </div>
+                                                    <h3><span>&mdash; </span>Payment Info</h3>
                                                     <div className="col-md-6">
                                                         <input
                                                             type="text"
