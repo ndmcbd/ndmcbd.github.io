@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "aos": "^3.0.0-beta.6",
     "bootstrap": "^5.2.3",
+    "firebase": "^9.16.0",
     "jquery": "^3.6.2",
     "justifiedGallery": "^3.8.1",
     "lightgallery": "^2.7.0",

@@ -59,7 +59,7 @@ const Home = () => {
                     >
                         <img
                             draggable="false"
-                            src="./ndmcbd/assets/img/about/01.jpg"
+                            src="./assets/img/about/01.jpg"
                             alt="math"
                             className="img-fluid covimg"
                         />

@@ -14,9 +14,11 @@ import Executives from "./Components/Executives";
 import { useLocation } from "react-router-dom";
 import FormerExectuives from "./Components/FormerExectuives";
 import Gallery from "./Components/Gallery";
-import RegisterEV from "./Components/Register";
+import Solo from "./Components/Solo";
 import Developers from "./Components/Developers";
 import $ from 'jquery';
+import Team from "./Components/Team";
+import Ca from "./Components/Ca";
 
 function App() {
     const { pathname } = useLocation();
@@ -58,7 +60,7 @@ function App() {
         <div className="App">
             <Header />
             <Routes>
-                <Route path="" element={<Home />} />
+                <Route path="/" element={<Home />} />
                 <Route path="about" element={<About />} />
                 <Route path="events" element={<Events />} />
                 <Route path="publications" element={<Publications />} />
@@ -66,9 +68,10 @@ function App() {
                 <Route path="gallery" element={<Gallery />} />
                 <Route path="executives" element={<Executives />} />
                 <Route path="executives/former" element={<FormerExectuives />} />
-                <Route path="register" element={<RegisterEV />} />
+                <Route path="register/solo" element={<Solo />} />
+                <Route path="register/team" element={<Team />} />
+                <Route path="register/ca" element={<Ca />} />
                 <Route path="dev" element={<Developers />} />
-		<Route path="*" element={<Home />} />
             </Routes>
 
             <Footer />
