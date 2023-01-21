@@ -1,12 +1,33 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useCallback, useState } from "react";
 import { Link } from "react-router-dom";
-import emailjs from "@emailjs/browser";
-import { ToastContainer, toast } from "react-toastify";
-import { addDoc, collection } from "firebase/firestore";
+import { useDropzone } from "react-dropzone";
 import { firestore } from "./../firebase_setup/firebase";
+import { ToastContainer, toast } from "react-toastify";
+import { collection, doc, setDoc } from "firebase/firestore";
+
+import { v4 as uuidv4 } from 'uuid';
+import {
+    getStorage,
+    ref,
+    uploadBytesResumable,
+    getDownloadURL,
+} from "firebase/storage";
 import "react-toastify/dist/ReactToastify.css";
 
-const Solo = () => {
+const Ca = () => {
+    const [image, setImage] = useState("");
+    const [progress, setProgress] = useState("");
+    const onDrop = useCallback((acceptedFiles) => {
+        setImage(acceptedFiles[0]);
+    }, []);
+    const { getRootProps, getInputProps, isDragActive } = useDropzone({
+        onDrop,
+        maxFiles: 1,
+        accept: {
+            "image/jpeg": [],
+            "image/png": [],
+        },
+    });
     const notify = () =>
         toast.success("Thank you for applying!", {
             position: "top-right",
@@ -21,6 +42,10 @@ const Solo = () => {
 
     const submitHandler = (e) => {
         e.preventDefault();
+        if (image==="") {
+            alert("Photo is required");
+            return;
+        }
         var subbtn = document.getElementById("subbtn");
         subbtn.innerHTML = "Submitted";
         subbtn.style.opacity = "0.5";
@@ -34,31 +59,59 @@ const Solo = () => {
         var experience = document.getElementsByName("experience")[0].value;
         var skills = document.getElementsByName("skills")[0].value;
 
-        var data = {
-            name: name,
-            email: email,
-            contact: contact,
-            institution: institution,
-            classNo: classNo,
-            roll: roll,
-            experience: experience,
-            skills: skills,
-        };
-        const ref = collection(firestore, "ca_candidates"); // Firebase creates this automatically
-        try {
-            addDoc(ref, data);
-        } catch (err) {
-            console.log(err);
-        }
+        const uid = uuidv4();
 
-        notify();
+        const storage = getStorage();
+        const storageRef = ref(storage, "ca-photos/" + uid + ".jpg");
+        const uploadTask = uploadBytesResumable(storageRef, image);
 
-        setTimeout(function () {
-            // alert("Thank you for registering. We will contact you soon.");
-            document.getElementById("mem_form").reset();
-            subbtn.innerHTML = "Register";
-            subbtn.style.opacity = "1";
-        }, 1000);
+        uploadTask.on(
+            "state_changed",
+            (snapshot) => {
+                // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+                const uploadProgress =
+                    (snapshot.bytesTransferred / snapshot.totalBytes) * 100 + "%";
+                setProgress(uploadProgress);
+            },
+            (error) => {
+                console.log(error);
+                setProgress("");
+            },
+            () => {
+                // Upload completed successfully, now we can get the download URL
+                getDownloadURL(uploadTask.snapshot.ref).then(async (imageUrl) => {
+                    var data = {
+                        name: name,
+                        email: email,
+                        contact: contact,
+                        institution: institution,
+                        classNo: classNo,
+                        roll: roll,
+                        experience: experience,
+                        skills: skills,
+                        imageUrl: imageUrl,
+                    };
+                    const collectionRef = collection(
+                        firestore,
+                        "ca_candidates"
+                    );  //Firebase creates this automatically
+                    try {
+                        await setDoc(doc(firestore, "ca_candidates", uid), data);
+                        notify();
+                        setTimeout(function () {
+                            // alert("Thank you for registering. We will contact you soon.");
+                            document.getElementById("mem_form").reset();
+                            setImage("");
+                            subbtn.innerHTML = "Register";
+                            subbtn.style.opacity = "1";
+                        }, 1000);
+                        setProgress("");
+                    } catch (err) {
+                        console.log(err, data);
+                    }
+                });
+            }
+        );
     };
 
     useEffect(() => {
@@ -105,7 +158,10 @@ const Solo = () => {
                         <div className="col-md-12">
                             <div className="mwt row">
                                 <div className="switch_reg text-center">
-                                    <Link to="../register/ca" className="typeact">
+                                    <Link
+                                        to="../register/ca"
+                                        className="typeact"
+                                    >
                                         Campus Ambassador
                                     </Link>
                                 </div>
@@ -217,10 +273,69 @@ const Solo = () => {
                                                         />
                                                     </div>
                                                     <div className="col-md-6">
-                                                        <textarea name="skills" placeholder="Skills (if any)"  rows="3" maxLength="400"></textarea>
+                                                        <textarea
+                                                            name="skills"
+                                                            placeholder="Skills (if any)"
+                                                            rows="3"
+                                                            maxLength="400"
+                                                        ></textarea>
                                                     </div>
                                                     <div className="col-md-6">
-                                                        <textarea name="experience" placeholder="Experience (if any)"  rows="3" maxLength="400"></textarea>
+                                                        <textarea
+                                                            name="experience"
+                                                            placeholder="Experience (if any)"
+                                                            rows="3"
+                                                            maxLength="400"
+                                                        ></textarea>
+                                                    </div>
+                                                    <div
+                                                        className="col-md-12"
+                                                        {...getRootProps()}
+                                                    >
+                                                        {image ? (
+                                                            <div>
+                                                                <input
+                                                                    {...getInputProps()}
+                                                                />
+                                                                {isDragActive ? (
+                                                                    <p>
+                                                                        Drop the
+                                                                        files
+                                                                        here ...
+                                                                    </p>
+                                                                ) : (
+                                                                    <p>
+                                                                        {
+                                                                            image.name
+                                                                        }
+                                                                    </p>
+                                                                )}{" "}
+                                                            </div>
+                                                        ) : (
+                                                            <div>
+                                                                <input
+                                                                    {...getInputProps()}
+                                                                />
+                                                                {isDragActive ? (
+                                                                    <p>
+                                                                        Drop the
+                                                                        files
+                                                                        here ...
+                                                                    </p>
+                                                                ) : (
+                                                                    <p>
+                                                                        Drag 'n'
+                                                                        drop
+                                                                        some
+                                                                        files
+                                                                        here, or
+                                                                        click to
+                                                                        select
+                                                                        files
+                                                                    </p>
+                                                                )}
+                                                            </div>
+                                                        )}
                                                     </div>
                                                     <div className="col-md-12">
                                                         <button
@@ -230,6 +345,7 @@ const Solo = () => {
                                                             Apply
                                                         </button>
                                                     </div>
+                                                    {progress}
                                                 </div>
                                             </div>
                                         </form>
@@ -246,4 +362,4 @@ const Solo = () => {
     );
 };
 
-export default Solo;
+export default Ca;

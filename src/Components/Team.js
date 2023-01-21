@@ -24,6 +24,7 @@ const Team = () => {
         subbtn.innerHTML = "Submitted";
         subbtn.style.opacity = "0.5";
         subbtn.style.transition = "all 0.5s ease-in-out";
+        var education = document.getElementsByName("education")[0].value;
         var name = document.getElementsByName("name")[0].value;
         var email = document.getElementsByName("email")[0].value;
         var contact = document.getElementsByName("phone")[0].value;
@@ -38,16 +39,20 @@ const Team = () => {
         var tm_1_email = document.getElementsByName('tm_1_email')[0].value;
         var tm_1_phone = document.getElementsByName('tm_1_phone')[0].value;
         var tm_1_institution = document.getElementsByName('tm_1_institution')[0].value;
+        var tm_1_class = document.getElementsByName('tm_1_class')[0].value;
         var tm_2_name = document.getElementsByName('tm_2_name')[0].value;
         var tm_2_email = document.getElementsByName('tm_2_email')[0].value;
         var tm_2_phone = document.getElementsByName('tm_2_phone')[0].value;
         var tm_2_institution = document.getElementsByName('tm_2_institution')[0].value;
+        var tm_2_class = document.getElementsByName('tm_2_class')[0].value;
         var tm_3_name = document.getElementsByName('tm_3_name')[0].value;
         var tm_3_email = document.getElementsByName('tm_3_email')[0].value;
         var tm_3_phone = document.getElementsByName('tm_3_phone')[0].value;
         var tm_3_institution = document.getElementsByName('tm_3_institution')[0].value;
+        var tm_3_class = document.getElementsByName('tm_3_class')[0].value;
 
         var data = {
+            education: education,
             name: name,
             email: email,
             contact: contact,
@@ -62,16 +67,19 @@ const Team = () => {
             emailMember01: tm_1_email,
             phoneMember01: tm_1_phone,
             institutionMember01: tm_1_institution,
+            classMember01: tm_1_class,
 
             nameMember02: tm_2_name,
             emailMember02: tm_2_email,
             phoneMember02: tm_2_phone,
             institutionMember02: tm_2_institution,
-
+            classMember02: tm_2_class,
+            
             nameMember03: tm_3_name,
             emailMember03: tm_3_email,
             phoneMember03: tm_3_phone,
             institutionMember03: tm_3_institution,
+            classMember03: tm_3_class,
             // tm_1 : {
             //     name: tm_1_name,
             //     email: tm_1_email,
@@ -198,7 +206,7 @@ const Team = () => {
                                                         &#x25cf;{" "}
                                                         <span>Amount: </span>
                                                     </span>{" "}
-                                                    200 BDT
+                                                    150 BDT (Per Team)
                                                 </h4>
                                                 <h4>
                                                     <span>
@@ -215,7 +223,12 @@ const Team = () => {
                                             </div>
                                             <div className="col-md-12">
                                                 <div className="row contform">
-                                                <h3><span>&mdash; </span>Team Leader</h3>
+                                                    <select id="education" name="education">
+                                                        <option value="Junior">Junior</option>
+                                                        <option value="Secondary">Secondary</option>
+                                                        <option value="High School">High School</option>
+                                                    </select>
+                                                    <h3><span>&mdash; </span>Team Leader</h3>
                                                     <div className="col-md-6">
                                                         <input
                                                             type="text"
@@ -303,6 +316,14 @@ const Team = () => {
                                                             required
                                                         />
                                                     </div>
+                                                    <div className="col-md-6">
+                                                        <input
+                                                            type="text"
+                                                            name="tm_1_class"
+                                                            placeholder="Class"
+                                                            required
+                                                        />
+                                                    </div>
                                                     <h3><span>&mdash; </span>Team Member 2</h3>
                                                     <div className="col-md-6">
                                                         <input
@@ -339,6 +360,14 @@ const Team = () => {
                                                             required
                                                         />
                                                     </div>
+                                                    <div className="col-md-6">
+                                                        <input
+                                                            type="text"
+                                                            name="tm_2_class"
+                                                            placeholder="Class"
+                                                            required
+                                                        />
+                                                    </div>
                                                     <h3><span>&mdash; </span>Team Member 3</h3>
                                                     <div className="col-md-6">
                                                         <input
@@ -372,6 +401,14 @@ const Team = () => {
                                                             type="text"
                                                             name="tm_3_institution"
                                                             placeholder="Institution"
+                                                            required
+                                                        />
+                                                    </div>
+                                                    <div className="col-md-6">
+                                                        <input
+                                                            type="text"
+                                                            name="tm_3_class"
+                                                            placeholder="Class"
                                                             required
                                                         />
                                                     </div>

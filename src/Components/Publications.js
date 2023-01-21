@@ -30,10 +30,10 @@ const About = () => {
             >
                 <div className="pubq content row col-md-12 mwt">
                         <div className="col-md-5 ccov">
-                            <div class="pub_cover cov1">
+                            <div className="pub_cover cov1">
                                 <img src={process.env.PUBLIC_URL + "/assets/img/publications/TheFunction19.jpg"} alt="The Function '19" />
                             </div>
-                            <div class="pub_cover cov2">
+                            <div className="pub_cover cov2">
                                 <img src={process.env.PUBLIC_URL + "/assets/img/publications/TheNumber2022.jpg"} alt="The Number 2022" />
                             </div>
                         </div>
@@ -46,14 +46,14 @@ const About = () => {
                     </div>
                 </div>
                 <div className="content row col-md-12 mwt">
-                        <div class="col-md-3 plane text-center">
+                        <div className="col-md-3 plane text-center">
                             <a href="../assets/img/publications/ThePlaneLeft.png">
-                                <img class="planeL" src={process.env.PUBLIC_URL + "/assets/img/publications/ThePlaneLeft.png"} alt="The Plane (Left)" />
+                                <img className="planeL" src={process.env.PUBLIC_URL + "/assets/img/publications/ThePlaneLeft.png"} alt="The Plane (Left)" />
                             </a>
                         </div>
-                        <div class="col-md-9 plane text-center">
+                        <div className="col-md-9 plane text-center">
                             <a href="../assets/img/publications/ThePlaneRight.png">
-                                <img class="planeR" src={process.env.PUBLIC_URL + "/assets/img/publications/ThePlaneRight.png"} alt="The Plane (Left)" />
+                                <img className="planeR" src={process.env.PUBLIC_URL + "/assets/img/publications/ThePlaneRight.png"} alt="The Plane (Left)" />
                             </a>
                         </div>
                 </div>

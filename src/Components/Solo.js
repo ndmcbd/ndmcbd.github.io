@@ -151,7 +151,7 @@ const Solo = () => {
                                                         &#x25cf;{" "}
                                                         <span>Amount: </span>
                                                     </span>{" "}
-                                                    200 BDT
+                                                    50 BDT
                                                 </h4>
                                                 <h4>
                                                     <span>
@@ -168,6 +168,7 @@ const Solo = () => {
                                             </div>
                                             <div className="col-md-12">
                                                 <div className="row contform">
+                                                    <h3><span>&mdash; </span>Personal Info</h3>
                                                     <div className="col-md-6">
                                                         <input
                                                             type="text"
@@ -227,6 +228,7 @@ const Solo = () => {
                                                             placeholder="Reference Code (if any)"
                                                         />
                                                     </div>
+                                                    <h3><span>&mdash; </span>Payment Info</h3>
                                                     <div className="col-md-6">
                                                         <input
                                                             type="text"
