@@ -24,7 +24,8 @@ const Team = () => {
         subbtn.innerHTML = "Submitted";
         subbtn.style.opacity = "0.5";
         subbtn.style.transition = "all 0.5s ease-in-out";
-        var education = document.getElementsByName("education")[0].value;
+        var category = document.querySelector('input[name="category"]:checked').value;
+        var team_name = document.getElementsByName("team_name")[0].value;
         var name = document.getElementsByName("name")[0].value;
         var email = document.getElementsByName("email")[0].value;
         var contact = document.getElementsByName("phone")[0].value;
@@ -33,8 +34,7 @@ const Team = () => {
         // var roll = document.getElementsByName("roll")[0].value;
         var reference = document.getElementsByName("reference")[0].value;
         var transactionId = document.getElementsByName("trnxID")[0].value;
-        var moneyNumber = document.getElementsByName("money_sending_number")[0]
-            .value;
+        var moneyNumber = document.getElementsByName("money_sending_number")[0].value;
         var tm_1_name = document.getElementsByName('tm_1_name')[0].value;
         var tm_1_email = document.getElementsByName('tm_1_email')[0].value;
         var tm_1_phone = document.getElementsByName('tm_1_phone')[0].value;
@@ -52,55 +52,37 @@ const Team = () => {
         var tm_3_class = document.getElementsByName('tm_3_class')[0].value;
 
         var data = {
-            education: education,
-            name: name,
-            email: email,
-            contact: contact,
-            institution: institution,
-            classNo: classNo,
-            // roll: roll,
-            reference: reference,
-            transactionId: transactionId,
-            moneyNumber: moneyNumber,
-
-            nameMember01: tm_1_name,
-            emailMember01: tm_1_email,
-            phoneMember01: tm_1_phone,
-            institutionMember01: tm_1_institution,
-            classMember01: tm_1_class,
-
-            nameMember02: tm_2_name,
-            emailMember02: tm_2_email,
-            phoneMember02: tm_2_phone,
-            institutionMember02: tm_2_institution,
-            classMember02: tm_2_class,
+            "Category": category,
+            "Team Name": team_name,
+            "Reference": reference,
+            "Trx ID": transactionId,
+            "Money Sending Number": moneyNumber,
             
-            nameMember03: tm_3_name,
-            emailMember03: tm_3_email,
-            phoneMember03: tm_3_phone,
-            institutionMember03: tm_3_institution,
-            classMember03: tm_3_class,
-            // tm_1 : {
-            //     name: tm_1_name,
-            //     email: tm_1_email,
-            //     phone: tm_1_phone,
-            //     institution: tm_1_institution,
-            // },
-            // tm_2 : {
-            //     name: tm_2_name,
-            //     email: tm_2_email,
-            //     phone: tm_2_phone,
-            //     institution: tm_2_institution,
-            // },
-            // tm_3 : {
-            //     name: tm_3_name,
-            //     email: tm_3_email,
-            //     phone: tm_3_phone,
-            //     institution: tm_3_institution,
-            // },
+            "Team Leader's Name": name,
+            "Team Leader's Email": email,
+            "Team Leader's Contact": contact,
+            "Team Leader's Institution": institution,
+            "Team Leader's Class ": classNo,            
 
+            "Name 01": tm_1_name,
+            "Email 01": tm_1_email,
+            "Contact 01": tm_1_phone,
+            "Institution 01": tm_1_institution,
+            "Class 01": tm_1_class,
+
+            "Name 02": tm_2_name,
+            "Email 02": tm_2_email,
+            "Contact 02": tm_2_phone,
+            "Institution 02": tm_2_institution,
+            "Class 02": tm_2_class,
+
+            "Name 03": tm_3_name,
+            "Email 03": tm_3_email,
+            "Contact 03": tm_3_phone,
+            "Institution 03": tm_3_institution,
+            "Class 03": tm_3_class,
         };
-        const ref = collection(firestore, "team_participants"); // Firebase creates this automatically
+        const ref = collection(firestore, "team_participants");
         try {
             addDoc(ref, data);
         } catch (err) {
@@ -110,7 +92,6 @@ const Team = () => {
         notify();
 
         setTimeout(function () {
-            // alert("Thank you for registering. We will contact you soon.");
             document.getElementById("mem_form").reset();
             subbtn.innerHTML = "Register";
             subbtn.style.opacity = "1";
@@ -223,11 +204,30 @@ const Team = () => {
                                             </div>
                                             <div className="col-md-12">
                                                 <div className="row contform">
-                                                    <select id="education" name="education">
-                                                        <option value="Junior">Junior</option>
-                                                        <option value="Secondary">Secondary</option>
-                                                        <option value="High School">High School</option>
-                                                    </select>
+                                                    <h3><span>&mdash; </span>Team Details</h3>
+                                                    <div className="col-md-6 text-center">
+                                                        <label>
+                                                            <input type="radio" id="junior" name="category" value="Junior" required />
+                                                            <span>Junior</span>
+                                                        </label>
+                                                        <label>
+                                                        <input type="radio" id="secondary" name="category" value="Secondary" required />
+                                                            <span>Secondary</span>
+                                                        </label>
+                                                        <label>
+                                                        <input type="radio" id="highschool" name="category" value="High School" required />
+                                                            <span>High School</span>
+                                                        </label>
+                                                    </div>
+                                                    <div className="col-md-6">
+                                                        <input
+                                                            type="text"
+                                                            name="team_name"
+                                                            placeholder="Team Name"
+                                                            required
+                                                        />
+                                                    </div>
+                                                    
                                                     <h3><span>&mdash; </span>Team Leader</h3>
                                                     <div className="col-md-6">
                                                         <input

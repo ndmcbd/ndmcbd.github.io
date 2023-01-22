@@ -45,21 +45,30 @@ const Solo = () => {
                     <div className="content row">
                         <div className="col-md-12">
                             <div className="mwt row">
-                                <div className="col-md-12">
-                                    <h3 className="text-center">
-                                    <span>&mdash;</span> SELECT TYPE <span>&mdash;</span>
+                            <div className="col-md-5 d-flex justify-content-center align-items-center">
+                                <img src="assets/img/events/3rdNDMC2023.jpg"
+                                     alt="..."
+                                     className="regBanner"
+                                />
+                            </div>
+                                <div className="col-md-7">
+                                    <h2 className="mt-4 mb-4 btex text-center">
+                                     3rd Annual Notre Dame Math Festival<br/>
+                                    </h2>
+                                    <h3 className="mb-4 text-center">
+                                     <span>&mdash; </span> Registration Type <span> &mdash;</span> <br/>
                                     </h3>
-                                </div>
-                                <div className="switch_reg text-center">
-                                    <Link to="../register/solo">
-                                        Solo
-                                    </Link>
-                                    <Link to="../register/team">
-                                        Team
-                                    </Link>
-                                    <Link to="../register/ca">
-                                        Campus Ambassador
-                                    </Link>
+                                    <div className="switch_reg text-center">
+                                        <Link to="../register/solo">
+                                            Solo
+                                        </Link>
+                                        <Link to="../register/team">
+                                            Team
+                                        </Link>
+                                        <Link to="../register/ca">
+                                            Campus Ambassador
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>

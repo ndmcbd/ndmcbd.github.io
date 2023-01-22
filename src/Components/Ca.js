@@ -28,8 +28,8 @@ const Ca = () => {
             "image/png": [],
         },
     });
-    const notify = () =>
-        toast.success("Thank you for applying!", {
+    const notify = (txt) =>
+        toast.success(txt, {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -40,14 +40,27 @@ const Ca = () => {
             theme: "dark",
         });
 
+    const processImageName = (image) => {
+        return image.name.split('.')[0].slice(0, 10) + '...' + image.name.slice(image.name.lastIndexOf("."));
+    }
+
     const submitHandler = (e) => {
         e.preventDefault();
         if (image==="") {
-            alert("Photo is required");
+            toast.error("Photo is required", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
             return;
         }
         var subbtn = document.getElementById("subbtn");
-        subbtn.innerHTML = "Submitted";
+        subbtn.innerHTML = "Please wait";
         subbtn.style.opacity = "0.5";
         subbtn.style.transition = "all 0.5s ease-in-out";
         var name = document.getElementsByName("name")[0].value;
@@ -55,9 +68,10 @@ const Ca = () => {
         var contact = document.getElementsByName("phone")[0].value;
         var institution = document.getElementsByName("institution")[0].value;
         var classNo = document.getElementsByName("class")[0].value;
-        var roll = document.getElementsByName("roll")[0].value;
+        var address = document.getElementsByName("address")[0].value;
         var experience = document.getElementsByName("experience")[0].value;
         var skills = document.getElementsByName("skills")[0].value;
+
 
         const uid = uuidv4();
 
@@ -71,25 +85,26 @@ const Ca = () => {
                 // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
                 const uploadProgress =
                     (snapshot.bytesTransferred / snapshot.totalBytes) * 100 + "%";
-                setProgress(uploadProgress);
+                    // document.getElementById("prog").innerText = uploadProgress;
+                // setProgress(uploadProgress);
             },
             (error) => {
                 console.log(error);
-                setProgress("");
+                // setProgress("");
             },
             () => {
                 // Upload completed successfully, now we can get the download URL
                 getDownloadURL(uploadTask.snapshot.ref).then(async (imageUrl) => {
                     var data = {
-                        name: name,
-                        email: email,
-                        contact: contact,
-                        institution: institution,
-                        classNo: classNo,
-                        roll: roll,
-                        experience: experience,
-                        skills: skills,
-                        imageUrl: imageUrl,
+                        "Name": name,
+                        "Email": email,
+                        "Contact": contact,
+                        "Institution": institution,
+                        "Class": classNo,
+                        "Address": address,
+                        "Experience": experience,
+                        "Skills": skills,
+                        "Photo": imageUrl,
                     };
                     const collectionRef = collection(
                         firestore,
@@ -97,7 +112,7 @@ const Ca = () => {
                     );  //Firebase creates this automatically
                     try {
                         await setDoc(doc(firestore, "ca_candidates", uid), data);
-                        notify();
+                        notify("Thank you for applying!");
                         setTimeout(function () {
                             // alert("Thank you for registering. We will contact you soon.");
                             document.getElementById("mem_form").reset();
@@ -105,7 +120,7 @@ const Ca = () => {
                             subbtn.innerHTML = "Register";
                             subbtn.style.opacity = "1";
                         }, 1000);
-                        setProgress("");
+                        // setProgress("");
                     } catch (err) {
                         console.log(err, data);
                     }
@@ -115,7 +130,7 @@ const Ca = () => {
     };
 
     useEffect(() => {
-        document.title = "Register - Notre Dame Math Club";
+        document.title = "CA Registration - Notre Dame Math Club";
     }, []);
 
     return (
@@ -177,50 +192,9 @@ const Ca = () => {
                                             id="mem_form"
                                             onSubmit={submitHandler}
                                         >
-                                            {/* <div className="moneywhere">
-                                                <h4>
-                                                    <span>&#x25cf;</span> Before
-                                                    filling out the form kindly
-                                                    complete you payment
-                                                </h4>
-                                                <h4>
-                                                    <span>
-                                                        &#x25cf;{" "}
-                                                        <span>
-                                                            Payment Method:{" "}
-                                                        </span>
-                                                    </span>{" "}
-                                                    bKash / Rocket / Nagad
-                                                </h4>
-                                                <h4>
-                                                    <span>
-                                                        &#x25cf;{" "}
-                                                        <span>Type: </span>
-                                                    </span>{" "}
-                                                    Send Money
-                                                </h4>
-                                                <h4>
-                                                    <span>
-                                                        &#x25cf;{" "}
-                                                        <span>Amount: </span>
-                                                    </span>{" "}
-                                                    200 BDT
-                                                </h4>
-                                                <h4>
-                                                    <span>
-                                                        &#x25cf;{" "}
-                                                        <span>Numbers: </span>
-                                                    </span>{" "}
-                                                    bKash &mdash;{" "}
-                                                    <span>01931093092</span>,
-                                                    Rocket &mdash;{" "}
-                                                    <span>019310930925</span>,
-                                                    Nagad &mdash;{" "}
-                                                    <span>01911958720</span>
-                                                </h4>
-                                            </div> */}
                                             <div className="col-md-12">
                                                 <div className="row contform">
+                                                <h3><span>&mdash; </span>Personal Info</h3>
                                                     <div className="col-md-6">
                                                         <input
                                                             type="text"
@@ -267,8 +241,8 @@ const Ca = () => {
                                                     <div className="col-md-6">
                                                         <input
                                                             type="text"
-                                                            name="roll"
-                                                            placeholder="Roll"
+                                                            name="address"
+                                                            placeholder="Address"
                                                             required
                                                         />
                                                     </div>
@@ -288,61 +262,27 @@ const Ca = () => {
                                                             maxLength="400"
                                                         ></textarea>
                                                     </div>
+                                                    <h3><span>&mdash; </span>Formal Photo</h3>
                                                     <div
-                                                        className="col-md-12"
+                                                        className="col-md-12 mb-4 dragndropi"
                                                         {...getRootProps()}
                                                     >
-                                                        {image ? (
-                                                            <div>
-                                                                <input
-                                                                    {...getInputProps()}
-                                                                />
-                                                                {isDragActive ? (
-                                                                    <p>
-                                                                        Drop the
-                                                                        files
-                                                                        here ...
-                                                                    </p>
-                                                                ) : (
-                                                                    <p>
-                                                                        {
-                                                                            image.name
-                                                                        }
-                                                                    </p>
-                                                                )}{" "}
-                                                            </div>
-                                                        ) : (
-                                                            <div>
-                                                                <input
-                                                                    {...getInputProps()}
-                                                                />
-                                                                {isDragActive ? (
-                                                                    <p>
-                                                                        Drop the
-                                                                        files
-                                                                        here ...
-                                                                    </p>
-                                                                ) : (
-                                                                    <p>
-                                                                        Drag 'n'
-                                                                        drop
-                                                                        some
-                                                                        files
-                                                                        here, or
-                                                                        click to
-                                                                        select
-                                                                        files
-                                                                    </p>
-                                                                )}
-                                                            </div>
-                                                        )}
+                                                        <div>
+                                                            <input {...getInputProps()}/>
+                                                            {isDragActive ? (
+                                                                <p>Drop your image...</p>
+                                                            ) : (
+                                                                <p>{image ? processImageName(image) : "Upload a Formal Photo"}</p>
+                                                            )}
+                                                        </div>
+
                                                     </div>
                                                     <div className="col-md-12">
                                                         <button
                                                             type="submit"
                                                             id="subbtn"
                                                         >
-                                                            Apply
+                                                            Register
                                                         </button>
                                                     </div>
                                                     {progress}

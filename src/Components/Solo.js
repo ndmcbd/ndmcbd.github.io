@@ -25,6 +25,7 @@ const Solo = () => {
         subbtn.innerHTML = "Submitted";
         subbtn.style.opacity = "0.5";
         subbtn.style.transition = "all 0.5s ease-in-out";
+        var category = document.querySelector('input[name="category"]:checked').value;
         var name = document.getElementsByName("name")[0].value;
         var email = document.getElementsByName("email")[0].value;
         var contact = document.getElementsByName("phone")[0].value;
@@ -37,16 +38,17 @@ const Solo = () => {
             .value;
 
         var data = {
-            name: name,
-            email: email,
-            contact: contact,
-            institution: institution,
-            classNo: classNo,
-            // roll: roll,
-            reference: reference,
-            transactionId: transactionId,
-            moneyNumber: moneyNumber,
+            "Category": category,
+            "Reference": reference,
+            "Trx ID": transactionId,
+            "Money Sending Number": moneyNumber,
+            "Name": name,
+            "Email": email,
+            "Contact": contact,
+            "Institution": institution,
+            "Class": classNo,
         };
+
         const ref = collection(firestore, "solo_participants"); // Firebase creates this automatically
         try {
             addDoc(ref, data);
@@ -168,6 +170,21 @@ const Solo = () => {
                                             </div>
                                             <div className="col-md-12">
                                                 <div className="row contform">
+                                                <h3><span>&mdash; </span>Category</h3>
+                                                    <div className="col-md-6 text-center">
+                                                        <label>
+                                                            <input type="radio" id="junior" name="category" value="Junior" required />
+                                                            <span>Junior</span>
+                                                        </label>
+                                                        <label>
+                                                        <input type="radio" id="secondary" name="category" value="Secondary" required />
+                                                            <span>Secondary</span>
+                                                        </label>
+                                                        <label>
+                                                        <input type="radio" id="highschool" name="category" value="High School" required />
+                                                            <span>High School</span>
+                                                        </label>
+                                                    </div>
                                                     <h3><span>&mdash; </span>Personal Info</h3>
                                                     <div className="col-md-6">
                                                         <input
