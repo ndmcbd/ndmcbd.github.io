@@ -130,7 +130,7 @@ const Solo = () => {
                                                 <h4>
                                                     <span>&#x25cf;</span> Before
                                                     filling out the form kindly
-                                                    complete you payment
+                                                    complete your payment.
                                                 </h4>
                                                 <h4>
                                                     <span>
