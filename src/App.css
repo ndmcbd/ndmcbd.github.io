@@ -1656,7 +1656,24 @@ a:focus-visible {
     border-radius: 6px;
 }
 
+.dragndropi div {
+    width: 100%;
+    border-radius: 15px;
+    padding: 10px 20px;
+    background-color: #b7b7ce07;
+    border: 1.5px dashed #f2eefc17;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 
+.dragndropi p {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    cursor: pointer;
+}
 
 label {
   cursor: pointer;
@@ -1713,6 +1730,12 @@ form h3 {
 
 .moneywhere h4 {
     font-size: 16px;
+}
+
+.regBanner {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 15px;
 }
 
 .moneywhere {
