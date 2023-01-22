@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { firestore } from "./../firebase_setup/firebase";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -47,6 +47,7 @@ const Solo = () => {
             "Contact": contact,
             "Institution": institution,
             "Class": classNo,
+            "Created": serverTimestamp()
         };
 
         const ref = collection(firestore, "solo_participants"); // Firebase creates this automatically

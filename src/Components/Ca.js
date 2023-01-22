@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useDropzone } from "react-dropzone";
 import { firestore } from "./../firebase_setup/firebase";
 import { ToastContainer, toast } from "react-toastify";
-import { collection, doc, setDoc } from "firebase/firestore";
+import { collection, doc, serverTimestamp, setDoc } from "firebase/firestore";
 
 import { v4 as uuidv4 } from 'uuid';
 import {
@@ -18,7 +18,11 @@ const Ca = () => {
     const [image, setImage] = useState("");
     const [progress, setProgress] = useState("");
     const onDrop = useCallback((acceptedFiles) => {
-        setImage(acceptedFiles[0]);
+        if ((acceptedFiles[0].size / (1024*1024)).toFixed(2) <= 1) {
+            setImage(acceptedFiles[0]);
+        } else {
+            alert("Image size should be less than 1MB");
+        }
     }, []);
     const { getRootProps, getInputProps, isDragActive } = useDropzone({
         onDrop,
@@ -121,6 +125,7 @@ const Ca = () => {
                         "Skills": skills,
                         "Photo": imageUrl,
                         "fbLink": fbLink,
+                        "Created": serverTimestamp()
                     };
                     const collectionRef = collection(
                         firestore,

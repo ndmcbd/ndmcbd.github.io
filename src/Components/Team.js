@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { firestore } from "./../firebase_setup/firebase";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -70,6 +70,8 @@ const Team = () => {
             "Contact 02": tm_2_phone,
             "Institution 02": tm_2_institution,
             "Class 02": tm_2_class,
+
+            "Created": serverTimestamp()
         };
         const ref = collection(firestore, "team_participants");
         try {
@@ -212,7 +214,7 @@ const Team = () => {
                                                         </label>
                                                         <label>
                                                         <input type="radio" id="hsecondary" name="category" value="High School" required />
-                                                            <span>High School</span>
+                                                            <span>H. Secondary</span>
                                                         </label>
                                                     </div>
                                                     <div className="col-md-6">
