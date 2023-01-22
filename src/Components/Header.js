@@ -160,12 +160,20 @@ const Header = () => {
                             </p>
                             <Link
                                 tabIndex="-1"
+                                to="./events/3rd-annual-notre-dame-math-festival-2023"
+                                rel="noreferrer"
+                                className="cstbtn upcoming upabo"
+                            >
+                                About
+                            </Link>
+                            <Link
+                                tabIndex="-1"
                                 to="../register"
                                 rel="noreferrer"
                                 className="cstbtn upcoming"
                             >
                                 Register{" "}
-                                <i className="fa-thin fa-arrow-up-right-from-square"></i>
+                                <i className="fa-thin fa-arrow-right"></i>
                             </Link>
                         </div>
                     </div>

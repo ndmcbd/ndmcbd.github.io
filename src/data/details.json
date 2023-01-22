@@ -1,0 +1,152 @@
+[
+    {
+        "name": "J, S, HS, Team;Math Project",
+        "description": [
+            "Math Project is a new topic, and NDMC is the first in our country to hold such an event. This is a team-based event; every team has to demonstrate a project related to Mathematics. For example:",
+            "CONICS: A cone can be cut into appropriate pieces to show different conics, and their mathematical interpretation can be related accordingly.",
+            "SEXTANT: Student can demonstrate a hand-made device to determine local time observing sun position.",
+            "VISUAL PROOF OF ANY THEOREM: Like demonstrating a cube that can be cut into appropriate pieces to derive the (a+b)³ formula."
+        ],
+        "rules": [
+            "Each team can have at most 3 members.",
+            "The project must be tangible. It means it should NOT be a presentation or a hypothetical object. It should be a model/device or anything made with paper/board/foam etc.",
+            "The competitors are to bring all the necessary equipment for their projects. Electricity line won’t be provided (Beware of using glue guns).",
+            "The project should be about inventions or theories created by our own."
+        ]
+    },
+    {
+        "name": "S, HS;Navigate The Way",
+        "description": ["Magnets were one of the mysterious inventions of human civilization. Follow the nose, and you are right where you want to be. Have you ever thought about how labyrinth our world will be if magnets were not invented? We will not make you Christopher Columbus, but we will definitely try to feel like that. (Of course, he didn’t know vector algebra, but you know) “Navigate The Way” is just like the classical olympiad. But the twist is- all of the questions in this round will be set from Vector Algebra & Navigation."],
+        "rules": [
+            "All solutions must be in integer form.",
+            "There will be a total of 10 Questions.",
+            "Questions will be provided in both languages."
+        ]
+    },
+    {
+        "name": "J, S, HS;Math Olympiad",
+        "description": ["You know what this is. If you are new to the olympiad, please refer to the Bangladesh Mathematical Olympiad website."],
+        "rules": [
+        "Use of calculators or any other computing device is strictly prohibited.",
+        "All the solutions will be in integer form.",
+        "Questions will be provided in both English & Bangla.",
+        "Questions will not be set in any difficulty order."
+        ]
+    },
+    {
+        "name": "HS;Calculus Mania",
+        "description": ["Another interesting segment. We talked about Christopher Columbus. But to assure you that we also deal with physicists aside from explorers, we included this one. It is a classical olympiad with questions only from Integral and Differential Calculus. Be sure to gear up your realm of calculus outside HSC textbooks. We both will be having fun during the olympiad! Best of luck!"],
+        "rules": [
+        "Questions will be HSC standard (slightly upper) level.",
+        "All solutions must be in integer form.",
+        "There will be a total of 10 Questions.",
+        "Questions will be provided in both languages."
+        ]
+    },
+    {
+        "name": "J, S, HS, Team;Math Relay",
+        "description": [],
+        "rules": [
+        "Participants must create a team of 3 members.",
+        "There will be 3 questions. The first member of the team will be given a question. After completing the first question, the first member of the team will give answers to the host of the meeting. Then the host will give the second question along with the answer to the first question submitted by the first member to the second member of the team, and the second member will solve it and give the answer to the host. And goes on accordingly for the third member.",
+        "The competition will continue. The winners will be the first 3 teams to complete the relay with correct answers."
+        ]
+    },
+    {
+        "name": "S, HS;Math History Quiz",
+        "description": ["Consider a day in bright May. You are going to the market and buying a mango. I may assume that 100% of the time, you will not ask the vendor, “Whose mango is this? More specifically, whose tree yielded this mango?”. This is the rule of the world. Golden Boat takes away golden paddy, right? Art stays, artist quits. We will pay a small tribute to the mathematicians for whom our civilization rolled onto this stage. This is a classical olympiad with questions from mathematicians, their history and interesting stories behind the invention."],
+        "rules": [
+        "In this segment, all the questions will be from the history of mathematics.",
+        "The questions will be provided in both languages.",
+        "The competition will be of 30 minutes."
+        ]
+    },
+    {
+        "name": "J, S, HS, Submission;Article Writing",
+        "description": [],
+        "rules": [
+            "The writings must be related to mathematics.",
+            "The maximum word limit is 1200.",
+            "Plagiarism is prohibited.",
+            "It must be written by hand. Online copies won’t be evaluated. It should be submitted to the help desk during the event."
+            ]
+    },
+    {
+        "name": "S, HS;Human Calculator",
+        "description": ["Participants will be given 30 minutes in this segment. They will have to solve hard and long math calculations in the given time. No pen or paper is allowed. Participants have to find out the answer by calculating in their minds. The top 3 participants who will solve the maximum number of questions will be announced as winners."],
+        "rules": []
+    },
+    {
+        "name": "J, S, HS, Team;Wall Magazine",
+        "description": [],
+        "rules": [
+            "Each team can have at most 3 members.",
+            "The wall magazine should be based on any mathematical event/history, invention, theorem, or any mathematicians, etc.",
+            "The competitors are to bring all the necessary equipment for their wall magazines. Electricity lines won’t be provided.",
+            "Participants must finish the set up of their wall magazine in time on Day 01 and be present on Day 02 at the time of judgment.",
+            "The top three teams from each category will be rewarded."
+            ]
+    },
+    {
+        "name": "J, S, HS, Team;Scrapbook",
+        "description": [],
+        "rules": [
+            "Each team can have at most 3 members.",
+            "The scrapbook should be based on any mathematical event/history, invention, theorem, or any mathematicians etc.",
+            "The competitors are to bring all the necessary equipment for their scrapbooks. Electricity lines won’t be provided.",
+            "Participants must finish the set up of their scrapbooks in time on Day 01 and be present on Day 02 at the time of judgment.",
+            "The top three teams from each category will be rewarded."
+            ]
+    },
+    {
+        "name": "J, S, HS, Submission;Mathinema",
+        "description": ["It is such a segment in which you have to submit a catchy video on any sublime mathematical topic. It may comprise any mathematician's life story, a visual proof of any formula, an idea, or anything else. Then they have to submit it in the NDMC Public group, <a target='_blank' href='https://facebook.com/groups/247305449972699/'>https://facebook.com/groups/247305449972699/</a> under these hashtags <span>#</span>ndmcMathinema <span>#</span>ConquerTheWorldWithMathematics <span>#</span>MathematicsInYourEyes"],
+        "rules": [
+            "Maximum video length is 1:30 minutes.",
+            "Participants have to make a video on any mathematical topic. It may contain the life of a mathematician, formula derivation in an unusual way, math memes, and application of any mathematical objects (3D geometry, conics, etc.).",
+            "The videos will be collected online and then posted in the public group.",
+            "The judgment will be made based on facebook reaction, comments, and sharing of that post until 11:59 p.m. on 3rd March 2023.",
+            "The participants can not post the video on other platforms till the end of the festival."
+            ]
+    },
+    {
+        "name": "J, S, HS;Crossword",
+        "description": ["In this segment, there will be a puzzle of words. Of course, the words will be connected to mathematics somehow. Participants will be given clues according to which they will have to write specific letters to form correct words."],
+        "rules": []
+    },
+    {
+        "name": "J, S, HS;IQ Olympiad",
+        "description": [],
+        "rules": [
+            "This is an individual contest.",
+            "Participants aren’t allowed to use any calculator.",
+            "Questions will not be set in any difficulty order."
+        ]
+    },
+    {
+        "name": "J, S, HS;Sudoku Master",
+        "description": [],
+        "rules": [
+            "This is a solo event with TWO rounds.",
+            "Participants will be given questions, and the fastest submissions will be deemed winners.",
+            "There will be 2 rounds: Classic Sudoku & Area Sudoku. Winners of classic sudoku will be allowed to move on to Area Sudoku.",
+            "Winners will receive crests and certificates."
+            ]
+    },
+    {
+        "name": "S, HS;Rubik’s Cube",
+        "description": [],
+        "rules": [
+            "The competition will be held in 3×3 format in two rounds.",
+            "Every participant must bring his own Rubik’s cube and be present by the due reporting time.",
+            "The competition will consist of two rounds: the Preliminary and Final rounds.",
+            "The top three performers in each category will be rewarded in the final round."
+            ]
+    },
+    {
+        "name": "J, S, HS;Workshops",
+        "description": ["Workshops are one of the most practical ways of enriching our knowledge, where any unique demonstration of a topic can illustrate our mind field collectively. Math topics are one of those well-known topics which have paved its long path only through spreading its erudition. NDMC has been organizing a handful of workshops on several spellbinding topics to clinch the thirst of math philologists. At the event, a prominent IMO medalist will be invited before the audience to share his practical knowledge on his journey to IMO, and how a newbie should learn to thrive and continue his further expedition. We believe participants will highly be benefited."],
+        "rules": []
+    }
+]
+  
