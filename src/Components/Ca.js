@@ -59,6 +59,20 @@ const Ca = () => {
             });
             return;
         }
+        if (image.size > 1000000) {
+            toast.error("Image size should be less than 1MB", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+            });
+            return;
+        }
+
         var subbtn = document.getElementById("subbtn");
         subbtn.innerHTML = "Please wait";
         subbtn.style.opacity = "0.5";
@@ -71,6 +85,7 @@ const Ca = () => {
         var address = document.getElementsByName("address")[0].value;
         var experience = document.getElementsByName("experience")[0].value;
         var skills = document.getElementsByName("skills")[0].value;
+        var fbLink = document.getElementsByName("fbLink")[0].value;
 
 
         const uid = uuidv4();
@@ -105,6 +120,7 @@ const Ca = () => {
                         "Experience": experience,
                         "Skills": skills,
                         "Photo": imageUrl,
+                        "fbLink": fbLink,
                     };
                     const collectionRef = collection(
                         firestore,
@@ -262,6 +278,14 @@ const Ca = () => {
                                                             maxLength="400"
                                                         ></textarea>
                                                     </div>
+                                                    <div className="col-md-12">
+                                                        <input
+                                                            type="url"
+                                                            name="fbLink"
+                                                            placeholder="Facebook Link"
+                                                            required
+                                                        />                                                        
+                                                    </div>
                                                     <h3><span>&mdash; </span>Formal Photo</h3>
                                                     <div
                                                         className="col-md-12 mb-4 dragndropi"
@@ -275,7 +299,7 @@ const Ca = () => {
                                                                 <p>{image ? processImageName(image) : "Upload a Formal Photo"}</p>
                                                             )}
                                                         </div>
-
+                                                        <p className="text-left mt-3">Note: The size of the picture must be less than 1 MB</p>
                                                     </div>
                                                     <div className="col-md-12">
                                                         <button
