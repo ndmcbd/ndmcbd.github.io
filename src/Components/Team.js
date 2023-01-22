@@ -45,11 +45,6 @@ const Team = () => {
         var tm_2_phone = document.getElementsByName('tm_2_phone')[0].value;
         var tm_2_institution = document.getElementsByName('tm_2_institution')[0].value;
         var tm_2_class = document.getElementsByName('tm_2_class')[0].value;
-        var tm_3_name = document.getElementsByName('tm_3_name')[0].value;
-        var tm_3_email = document.getElementsByName('tm_3_email')[0].value;
-        var tm_3_phone = document.getElementsByName('tm_3_phone')[0].value;
-        var tm_3_institution = document.getElementsByName('tm_3_institution')[0].value;
-        var tm_3_class = document.getElementsByName('tm_3_class')[0].value;
 
         var data = {
             "Category": category,
@@ -75,12 +70,6 @@ const Team = () => {
             "Contact 02": tm_2_phone,
             "Institution 02": tm_2_institution,
             "Class 02": tm_2_class,
-
-            "Name 03": tm_3_name,
-            "Email 03": tm_3_email,
-            "Contact 03": tm_3_phone,
-            "Institution 03": tm_3_institution,
-            "Class 03": tm_3_class,
         };
         const ref = collection(firestore, "team_participants");
         try {
@@ -99,7 +88,7 @@ const Team = () => {
     };
 
     useEffect(() => {
-        document.title = "Register - Notre Dame Math Club";
+        document.title = "Team Registration - Notre Dame Math Club";
     }, []);
 
     return (
@@ -195,11 +184,18 @@ const Team = () => {
                                                         <span>Numbers: </span>
                                                     </span>{" "}
                                                     bKash &mdash;{" "}
-                                                    <span>01931093092</span>,
+                                                    <span>01748319676</span>,
                                                     Rocket &mdash;{" "}
-                                                    <span>019310930925</span>,
+                                                    <span>017483196766</span>,
                                                     Nagad &mdash;{" "}
                                                     <span>01911958720</span>
+                                                </h4>
+                                                <h4>
+                                                    <span>
+                                                        &#x25cf;{" "}
+                                                        <span>Payment Reference Code: </span>
+                                                    </span>{" "}
+                                                    3ANDMF2023
                                                 </h4>
                                             </div>
                                             <div className="col-md-12">
@@ -215,7 +211,7 @@ const Team = () => {
                                                             <span>Secondary</span>
                                                         </label>
                                                         <label>
-                                                        <input type="radio" id="highschool" name="category" value="High School" required />
+                                                        <input type="radio" id="hsecondary" name="category" value="High School" required />
                                                             <span>High School</span>
                                                         </label>
                                                     </div>
@@ -364,50 +360,6 @@ const Team = () => {
                                                         <input
                                                             type="text"
                                                             name="tm_2_class"
-                                                            placeholder="Class"
-                                                            required
-                                                        />
-                                                    </div>
-                                                    <h3><span>&mdash; </span>Team Member 3</h3>
-                                                    <div className="col-md-6">
-                                                        <input
-                                                            type="text"
-                                                            name="tm_3_name"
-                                                            placeholder="Name"
-                                                            required
-                                                        />
-                                                    </div>
-                                                    <div className="col-md-6">
-                                                        <input
-                                                            type="email"
-                                                            name="tm_3_email"
-                                                            placeholder="Email"
-                                                            required
-                                                        />
-                                                    </div>
-                                                    <div className="col-md-6">
-                                                        <input
-                                                            name="tm_3_phone"
-                                                            placeholder="Contact Number"
-                                                            required
-                                                            type="text"
-                                                            maxLength="13"
-                                                            minLength="11"
-                                                            pattern="8801[0-9]{9}|01[0-9]{9}"
-                                                        />
-                                                    </div>
-                                                    <div className="col-md-6">
-                                                        <input
-                                                            type="text"
-                                                            name="tm_3_institution"
-                                                            placeholder="Institution"
-                                                            required
-                                                        />
-                                                    </div>
-                                                    <div className="col-md-6">
-                                                        <input
-                                                            type="text"
-                                                            name="tm_3_class"
                                                             placeholder="Class"
                                                             required
                                                         />

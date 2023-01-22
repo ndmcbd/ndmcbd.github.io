@@ -67,7 +67,7 @@ const Solo = () => {
     };
 
     useEffect(() => {
-        document.title = "Register - Notre Dame Math Club";
+        document.title = "Solo Registration - Notre Dame Math Club";
     }, []);
 
     return (
@@ -161,11 +161,18 @@ const Solo = () => {
                                                         <span>Numbers: </span>
                                                     </span>{" "}
                                                     bKash &mdash;{" "}
-                                                    <span>01931093092</span>,
+                                                    <span>01748319676</span>,
                                                     Rocket &mdash;{" "}
-                                                    <span>019310930925</span>,
+                                                    <span>017483196766</span>,
                                                     Nagad &mdash;{" "}
                                                     <span>01911958720</span>
+                                                </h4>
+                                                <h4>
+                                                    <span>
+                                                        &#x25cf;{" "}
+                                                        <span>Payment Reference Code: </span>
+                                                    </span>{" "}
+                                                    3ANDMF2023
                                                 </h4>
                                             </div>
                                             <div className="col-md-12">
@@ -181,8 +188,8 @@ const Solo = () => {
                                                             <span>Secondary</span>
                                                         </label>
                                                         <label>
-                                                        <input type="radio" id="highschool" name="category" value="High School" required />
-                                                            <span>High School</span>
+                                                        <input type="radio" id="hsecondary" name="category" value="H. Secondary" required />
+                                                            <span>H. Secondary</span>
                                                         </label>
                                                     </div>
                                                     <h3><span>&mdash; </span>Personal Info</h3>
