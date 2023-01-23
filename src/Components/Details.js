@@ -101,6 +101,7 @@ const Solo = () => {
                                         <HLink to="#segements" className="col-md-2 col-sm-4">Segments</HLink>
                                         <HLink to="#schedule" className="col-md-2 col-sm-4">Schedule</HLink>
                                         <HLink to="#contacts" className="col-md-2 col-sm-4">Contacts</HLink>
+                                        <Link to="../../register" className="col-md-2 col-sm-4">Register</Link>
                                     </div>
                                     <h3 className="mb-4 text-center smargin" id="categories">
                                         <span>&mdash; </span> Categories <span> &mdash;</span> <br/>
@@ -295,7 +296,7 @@ const Solo = () => {
                                                 <h2><span>&mdash; </span>Executives</h2>
                                                 <h4><span>&#x25cf; </span> Sharif Bin Haque (General Secretary): 01675406160</h4>
                                                 <h4><span>&#x25cf; </span> Mehedi Hassan (President - Admin): 01862207756</h4>
-                                                <h4><span>&#x25cf; </span> Saom Bin Khalid (President - IT): 01818422655</h4>
+                                                <h4><span>&#x25cf; </span> Saom Bin Khaled (President - IT): 01818422655</h4>
                                                 <h4><span>&#x25cf; </span> Nadiruzzaman Naef (President - PR): 01816513721</h4>
                                                 <h4><span>&#x25cf; </span> Farhan Mahtab (VP - PR): 01639573866</h4>
                                             </div>
