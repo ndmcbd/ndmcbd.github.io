@@ -173,7 +173,7 @@ const Solo = () => {
                                                         &#x25cf;{" "}
                                                         <span>Payment Reference Code: </span>
                                                     </span>{" "}
-                                                    3ANDMF2023
+                                                    [YOUR NAME]_3ANDMF2023
                                                 </h4>
                                             </div>
                                             <div className="col-md-12">

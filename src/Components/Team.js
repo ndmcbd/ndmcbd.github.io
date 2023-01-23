@@ -197,7 +197,7 @@ const Team = () => {
                                                         &#x25cf;{" "}
                                                         <span>Payment Reference Code: </span>
                                                     </span>{" "}
-                                                    3ANDMF2023
+                                                    [YOUR NAME]_3ANDMF2023
                                                 </h4>
                                             </div>
                                             <div className="col-md-12">
@@ -284,7 +284,6 @@ const Team = () => {
                                                             type="text"
                                                             name="tm_1_name"
                                                             placeholder="Name"
-                                                            required
                                                         />
                                                     </div>
                                                     <div className="col-md-6">
@@ -292,14 +291,12 @@ const Team = () => {
                                                             type="email"
                                                             name="tm_1_email"
                                                             placeholder="Email"
-                                                            required
                                                         />
                                                     </div>
                                                     <div className="col-md-6">
                                                         <input
                                                             name="tm_1_phone"
                                                             placeholder="Contact Number"
-                                                            required
                                                             type="text"
                                                             maxLength="13"
                                                             minLength="11"
@@ -311,7 +308,6 @@ const Team = () => {
                                                             type="text"
                                                             name="tm_1_institution"
                                                             placeholder="Institution"
-                                                            required
                                                         />
                                                     </div>
                                                     <div className="col-md-6">
@@ -319,7 +315,6 @@ const Team = () => {
                                                             type="text"
                                                             name="tm_1_class"
                                                             placeholder="Class"
-                                                            required
                                                         />
                                                     </div>
                                                     <h3><span>&mdash; </span>Team Member 2</h3>
@@ -328,7 +323,6 @@ const Team = () => {
                                                             type="text"
                                                             name="tm_2_name"
                                                             placeholder="Name"
-                                                            required
                                                         />
                                                     </div>
                                                     <div className="col-md-6">
@@ -336,14 +330,12 @@ const Team = () => {
                                                             type="email"
                                                             name="tm_2_email"
                                                             placeholder="Email"
-                                                            required
                                                         />
                                                     </div>
                                                     <div className="col-md-6">
                                                         <input
                                                             name="tm_2_phone"
                                                             placeholder="Contact Number"
-                                                            required
                                                             type="text"
                                                             maxLength="13"
                                                             minLength="11"
@@ -355,7 +347,6 @@ const Team = () => {
                                                             type="text"
                                                             name="tm_2_institution"
                                                             placeholder="Institution"
-                                                            required
                                                         />
                                                     </div>
                                                     <div className="col-md-6">
@@ -363,7 +354,6 @@ const Team = () => {
                                                             type="text"
                                                             name="tm_2_class"
                                                             placeholder="Class"
-                                                            required
                                                         />
                                                     </div>
                                                     <h3><span>&mdash; </span>Payment Info</h3>
