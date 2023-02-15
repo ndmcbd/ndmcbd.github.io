@@ -48,107 +48,107 @@ const Ca = () => {
         return image.name.split('.')[0].slice(0, 10) + '...' + image.name.slice(image.name.lastIndexOf("."));
     }
 
-    const submitHandler = (e) => {
-        e.preventDefault();
-        if (image==="") {
-            toast.error("Photo is required", {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-            });
-            return;
-        }
-        if (image.size > 1000000) {
-            toast.error("Image size should be less than 1MB", {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-            });
-            return;
-        }
+    // const submitHandler = (e) => {
+    //     e.preventDefault();
+    //     if (image==="") {
+    //         toast.error("Photo is required", {
+    //             position: "top-right",
+    //             autoClose: 5000,
+    //             hideProgressBar: false,
+    //             closeOnClick: true,
+    //             pauseOnHover: true,
+    //             draggable: true,
+    //             progress: undefined,
+    //             theme: "dark",
+    //         });
+    //         return;
+    //     }
+    //     if (image.size > 1000000) {
+    //         toast.error("Image size should be less than 1MB", {
+    //             position: "top-right",
+    //             autoClose: 5000,
+    //             hideProgressBar: false,
+    //             closeOnClick: true,
+    //             pauseOnHover: true,
+    //             draggable: true,
+    //             progress: undefined,
+    //             theme: "dark",
+    //         });
+    //         return;
+    //     }
 
-        var subbtn = document.getElementById("subbtn");
-        subbtn.innerHTML = "Please wait";
-        subbtn.style.opacity = "0.5";
-        subbtn.style.transition = "all 0.5s ease-in-out";
-        var name = document.getElementsByName("name")[0].value;
-        var email = document.getElementsByName("email")[0].value;
-        var contact = document.getElementsByName("phone")[0].value;
-        var institution = document.getElementsByName("institution")[0].value;
-        var classNo = document.getElementsByName("class")[0].value;
-        var address = document.getElementsByName("address")[0].value;
-        var experience = document.getElementsByName("experience")[0].value;
-        var skills = document.getElementsByName("skills")[0].value;
-        var fbLink = document.getElementsByName("fbLink")[0].value;
+    //     var subbtn = document.getElementById("subbtn");
+    //     subbtn.innerHTML = "Please wait";
+    //     subbtn.style.opacity = "0.5";
+    //     subbtn.style.transition = "all 0.5s ease-in-out";
+    //     var name = document.getElementsByName("name")[0].value;
+    //     var email = document.getElementsByName("email")[0].value;
+    //     var contact = document.getElementsByName("phone")[0].value;
+    //     var institution = document.getElementsByName("institution")[0].value;
+    //     var classNo = document.getElementsByName("class")[0].value;
+    //     var address = document.getElementsByName("address")[0].value;
+    //     var experience = document.getElementsByName("experience")[0].value;
+    //     var skills = document.getElementsByName("skills")[0].value;
+    //     var fbLink = document.getElementsByName("fbLink")[0].value;
 
 
-        const uid = uuidv4();
+    //     const uid = uuidv4();
 
-        const storage = getStorage();
-        const storageRef = ref(storage, "ca-photos/" + uid + ".jpg");
-        const uploadTask = uploadBytesResumable(storageRef, image);
+    //     const storage = getStorage();
+    //     const storageRef = ref(storage, "ca-photos/" + uid + ".jpg");
+    //     const uploadTask = uploadBytesResumable(storageRef, image);
 
-        uploadTask.on(
-            "state_changed",
-            (snapshot) => {
-                // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
-                const uploadProgress =
-                    (snapshot.bytesTransferred / snapshot.totalBytes) * 100 + "%";
-                    // document.getElementById("prog").innerText = uploadProgress;
-                // setProgress(uploadProgress);
-            },
-            (error) => {
-                console.log(error);
-                // setProgress("");
-            },
-            () => {
-                // Upload completed successfully, now we can get the download URL
-                getDownloadURL(uploadTask.snapshot.ref).then(async (imageUrl) => {
-                    var data = {
-                        "Name": name,
-                        "Email": email,
-                        "Contact": contact,
-                        "Institution": institution,
-                        "Class": classNo,
-                        "Address": address,
-                        "Experience": experience,
-                        "Skills": skills,
-                        "Photo": imageUrl,
-                        "fbLink": fbLink,
-                        "Created": serverTimestamp()
-                    };
-                    const collectionRef = collection(
-                        firestore,
-                        "ca_candidates"
-                    );  //Firebase creates this automatically
-                    try {
-                        await setDoc(doc(firestore, "ca_candidates", uid), data);
-                        notify("Thank you for applying!");
-                        setTimeout(function () {
-                            // alert("Thank you for registering. We will contact you soon.");
-                            document.getElementById("mem_form").reset();
-                            setImage("");
-                            subbtn.innerHTML = "Register";
-                            subbtn.style.opacity = "1";
-                        }, 1000);
-                        // setProgress("");
-                    } catch (err) {
-                        console.log(err, data);
-                    }
-                });
-            }
-        );
-    };
+    //     uploadTask.on(
+    //         "state_changed",
+    //         (snapshot) => {
+    //             // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+    //             const uploadProgress =
+    //                 (snapshot.bytesTransferred / snapshot.totalBytes) * 100 + "%";
+    //                 // document.getElementById("prog").innerText = uploadProgress;
+    //             // setProgress(uploadProgress);
+    //         },
+    //         (error) => {
+    //             console.log(error);
+    //             // setProgress("");
+    //         },
+    //         () => {
+    //             // Upload completed successfully, now we can get the download URL
+    //             getDownloadURL(uploadTask.snapshot.ref).then(async (imageUrl) => {
+    //                 var data = {
+    //                     "Name": name,
+    //                     "Email": email,
+    //                     "Contact": contact,
+    //                     "Institution": institution,
+    //                     "Class": classNo,
+    //                     "Address": address,
+    //                     "Experience": experience,
+    //                     "Skills": skills,
+    //                     "Photo": imageUrl,
+    //                     "fbLink": fbLink,
+    //                     "Created": serverTimestamp()
+    //                 };
+    //                 const collectionRef = collection(
+    //                     firestore,
+    //                     "ca_candidates"
+    //                 );  //Firebase creates this automatically
+    //                 try {
+    //                     await setDoc(doc(firestore, "ca_candidates", uid), data);
+    //                     notify("Thank you for applying!");
+    //                     setTimeout(function () {
+    //                         // alert("Thank you for registering. We will contact you soon.");
+    //                         document.getElementById("mem_form").reset();
+    //                         setImage("");
+    //                         subbtn.innerHTML = "Register";
+    //                         subbtn.style.opacity = "1";
+    //                     }, 1000);
+    //                     // setProgress("");
+    //                 } catch (err) {
+    //                     console.log(err, data);
+    //                 }
+    //             });
+    //         }
+    //     );
+    // };
 
     useEffect(() => {
         document.title = "CA Registration - Notre Dame Math Club";
@@ -209,6 +209,7 @@ const Ca = () => {
                                         className="reg-form"
                                         data-aos="fade-up"
                                     >
+                                    { /*
                                         <form
                                             id="mem_form"
                                             onSubmit={submitHandler}
@@ -318,6 +319,14 @@ const Ca = () => {
                                                 </div>
                                             </div>
                                         </form>
+                                        */ }
+                                    <div className="getint mwt row mb-5">
+                                        <div className="col-md-9">
+                                            <h3 className="text-center">We are no longer accepting responses.</h3>
+                                        </div>
+                                        <div className="splash1 smolsplash"></div>
+                                        <div className="splash2 smolsplash"></div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
