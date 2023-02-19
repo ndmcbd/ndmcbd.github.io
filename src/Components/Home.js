@@ -8,6 +8,10 @@ const Home = () => {
         document.title = "Home - Notre Dame Math Club";
         window.history.pushState("", "", "/");
     }, []);
+    const scrollToSection = (id) => {
+        const element = document.getElementById(id);
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
     return (
         <div className="container-fluid">
             <section className="section home-sec row d-flex justify-content-center">
@@ -40,9 +44,9 @@ const Home = () => {
                         <div className="secret0"></div>
                     </div>
                 </div>
-                <a tabIndex="-1" className="scrollDown" href="#about">
+                <Link tabIndex="-1" className="scrollDown" onClick={() => scrollToSection('about')}>
                     <i className="fa-thin fa-chevron-down"></i>
-                </a>
+                </Link>
             </section>
 
             <section

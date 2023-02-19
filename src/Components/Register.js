@@ -9,6 +9,8 @@ import "react-toastify/dist/ReactToastify.css";
 const Solo = () => {
     useEffect(() => {
         document.title = "Register - Notre Dame Math Club";
+        const tHeight = document.querySelector('body').offsetHeight
+        document.getElementsByClassName('boo')[0].style.marginBottom = `calc(100vh - ${tHeight}px)`;
     }, []);
 
     return (
@@ -41,7 +43,7 @@ const Solo = () => {
                 </ol>
             </section>
             <div className="container-fluid">
-                <section className="row d-flex justify-content-center">
+                <section className="row d-flex justify-content-center boo">
                     <div className="content row">
                         <div className="col-md-12">
                             <div className="mwt row">

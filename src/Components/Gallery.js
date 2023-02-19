@@ -34,7 +34,6 @@ const Gallery = () => {
         document.title = "Gallery - Notre Dame Math Club";
         $(".gallery-container").justifiedGallery({
             captions: false,
-            lastRow: "hide",
             rowHeight: 180,
             margins: 5,
         });
@@ -89,7 +88,6 @@ const Gallery = () => {
                                             autoplayFirstVideo={false}
                                             pager={false}
                                             download={false}
-                                            slideShowInterval={3000}
                                             galleryId="ndmc_gallery"
                                             plugins={[lgZoom, lgAutoplay]}
                                             elementClassNames="gallery-container"
