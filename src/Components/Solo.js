@@ -123,7 +123,7 @@ const Solo = () => {
                                         className="reg-form"
                                         data-aos="fade-up"
                                     >
-                                        <form
+                                        {/* <form
                                             id="mem_form"
                                             onSubmit={submitHandler}
                                         >
@@ -237,15 +237,6 @@ const Solo = () => {
                                                             required
                                                         />
                                                     </div>
-                                                    {/* <div className="col-md-6">
-                                                        <input
-                                                            type="text"
-                                                            name="roll"
-                                                            placeholder="Roll"
-                                                            required
-                                                        />
-                                                    </div>
-                                                    <div className="col-md-6"></div> */}
                                                     <div className="col-md-6">
                                                         <input
                                                             type="text"
@@ -283,7 +274,14 @@ const Solo = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </form>
+                                        </form> */}
+                                        <div className="getint mwt row mb-5">
+                                        <div className="col-md-9">
+                                            <h3 className="text-center">We are no longer accepting responses.</h3>
+                                        </div>
+                                        <div className="splash1 smolsplash"></div>
+                                        <div className="splash2 smolsplash"></div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
