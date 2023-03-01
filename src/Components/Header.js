@@ -144,7 +144,7 @@ const Header = () => {
                 <div className="D1">
                     <div className="card upcoming">
                         <i className="fa-thin fa-xmark" id="closeUpEvent"></i>
-                        <div className="upcom">Upcoming</div>
+                        <div className="upcom">Ongoing</div>
                         <img
                             src="assets/img/events/3rdNDMC2023.jpg"
                             className="card-img-top"

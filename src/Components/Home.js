@@ -152,7 +152,7 @@ const Home = () => {
                                 data-aos="zoom-in-up"
                             >
                                 <div className="card upcoming">
-                                    <div className="upcom">Upcoming</div>
+                                    <div className="upcom">Ongoing</div>
                                     <img
                                         src="assets/img/events/3rdNDMC2023.jpg"
                                         className="card-img-top"
