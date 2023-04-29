@@ -21,6 +21,8 @@ import Developers from "./Components/Developers";
 import $ from 'jquery';
 import Team from "./Components/Team";
 import Ca from "./Components/Ca";
+import Math from "./Components/Math";
+import SpeedMath from "./Components/SpeedMath";
 
 function App() {
     const { pathname } = useLocation();
@@ -76,6 +78,8 @@ function App() {
                 <Route path="register/team" element={<Team />} />
                 <Route path="register/ca" element={<Ca />} />
                 <Route path="dev" element={<Developers />} />
+                <Route path="math" element={<Math />} />
+                <Route path="speedmath" element={<SpeedMath />} />
             </Routes>
 
             <Footer />

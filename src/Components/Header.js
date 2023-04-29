@@ -132,15 +132,20 @@ const Header = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link onClick={closeDrawer} tabIndex="-1" to="contact" className={pathname ==="contact" ? "active-ul" : ""}>
-                                Contact
+                            <Link onClick={closeDrawer} tabIndex="-1" to="speedmath">
+                                SpeedMath
+                            </Link>
+                        </li>
+                        <li>
+                            <Link onClick={closeDrawer} tabIndex="-1" to="math">
+                                MathMate
                             </Link>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div className="upEventModal">
+  {/* <div className="upEventModal">
                 <div className="D1">
                     <div className="card upcoming">
                         <i className="fa-thin fa-xmark" id="closeUpEvent"></i>
@@ -178,7 +183,8 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+                 </div>
+    */} 
         </div>
     );
 };

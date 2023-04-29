@@ -66,12 +66,19 @@ img {
 }
 
 h1 {
-    font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 40px;
     line-height: 1.2;
 }
-
+.collectAns {
+    height: 60px;
+    font-size: 20px;
+    border-color: #433f79;
+}
+.btn-submission {
+    font-size: 16px;
+}
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -80,9 +87,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
+
 
 .h1bigg {
     font-size: 4rem;
@@ -98,11 +103,10 @@ a:active {
     display: inline-block;
     padding: 0.8rem 2rem;
     margin-right: 10px;
-    border-radius: 10px;
+    border-radius:15px;
     background: var(--gc);
     color: var(--wh);
     text-decoration: none;
-    text-transform: uppercase;
     font-weight: 600;
     transition: all 0.3s ease;
     outline: none;
@@ -159,7 +163,7 @@ a:active {
 }
 
 .btn-primary {
-    border-radius: 8px;
+    border-radius: 15px;
     background: var(--gc);
     background: linear-gradient(-60deg, #7c75e0 0, #655ce4 100%);
 }
@@ -172,7 +176,7 @@ a:active {
 
 
 .btn-secondary {
-    border-radius: 8px;
+    border-radius: 15px;
     background: var(--gc);
     background: linear-gradient(-60deg, #4c4a4e 0, #5f5e61 100%);
     transition: 0.5s;
@@ -1122,12 +1126,17 @@ p.clkdet {
         background: #845bf3b0;
     }
 }
+.StartBit {
+    margin-bottom: 500px;
+}
 
 footer {
+    margin-top: 150px;
     margin-bottom: 30px;
     position: relative;
     bottom: 0px;
     left: 0px;
+    display: none;
 }
 
 #scrollToTop {
@@ -1703,7 +1712,7 @@ label {
   overflow: hidden;
 }
 
-label:nth-child(2){
+label:nth-child(100){
     margin-left: 10px;
 }
 
@@ -1727,6 +1736,16 @@ label span {
   transition: 0.25s ease;
   border: 0.5px solid transparent;
 }
+.errortext {
+    display:block;
+    color: #ff8585!important;
+  }
+.mathcontent {
+    margin-bottom: 100px;
+
+}
+
+  
 label span:hover {
   background-color: #b7b7ce07;
 }
@@ -1747,9 +1766,13 @@ form h3 {
     font-size: 18px;
     width: 100%;
     padding: 0 20px;
+    margin-bottom: 40px;
 }
 
-.moneywhere h4 {
+.instructions h4 {
+    line-height: 1.5;
+} 
+.insdesc {
     font-size: 16px;
 }
 
@@ -1759,7 +1782,7 @@ form h3 {
     border-radius: 15px;
 }
 
-.moneywhere {
+.instructions {
     width: 100%;
     background: #b7b7ce07;
     border: 0.5px solid #f2eefc17;
@@ -1768,14 +1791,25 @@ form h3 {
     margin-bottom: 30px;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    color: #c2c1c5;
+    color: #d7d6d9;
+}
+.quizQues {
+    width: 100%;
+    background: #b7b7ce07;
+    border: 0.5px solid #f2eefc17;
+    border-radius: 25px;
+    padding: 25px 25px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #d7d6d9;
 }
 
-.moneywhere span, h3 span {
+.instructions span, h3 span {
     color: #7c75e0;
 }
 
-.moneywhere > h4 > span > span {
+.instructions  > h4 > span > span {
     color: #f2eefc;
     font-weight: 700;
 }
@@ -1910,4 +1944,28 @@ textarea:focus {
 
 .curs .card{
     cursor: pointer;
+}
+.resultCard {
+    font-size: 18px;
+}
+.correct-popup {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  padding: 8px;
+  background-color: green;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.incorrect-popup {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  padding: 8px;
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
 }
