@@ -1969,3 +1969,86 @@ textarea:focus {
   font-size: 16px;
   border-radius: 4px;
 }
+
+.sudoku-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-gap: 2px;
+    background-color: #333;
+    padding: 5px;
+  }
+  
+  .sudoku-row {
+    display: flex;
+  }
+  
+  .sudoku-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #555;
+    transition: background-color 0.3s;
+  }
+  
+  .sudoku-cell.selected {
+    background-color: #ffc107;
+  }
+  
+  .sudoku-cell:hover {
+    background-color: #777;
+  }
+  
+  .sudoku-numbers {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .sudoku-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007bff;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .sudoku-number:hover {
+    background-color: #0056b3;
+  }
+  
+  .generate-button {
+    margin-top: 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .generate-button:hover {
+    background-color: #218838;
+  }
+  
+  

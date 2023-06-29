@@ -126,20 +126,58 @@ const Header = () => {
                                 </li>
                             </ul>
                         </li>
+                        <li className="dropdown">
+                            <a
+                                tabIndex="-1"
+                                className={`dropdown-toggle ${pathname ==="#" ? "active-ul" : ""}`}
+                                data-toggle="dropdown"
+                            >
+                                Games
+                            </a>
+                            <ul className="dropdown-menu">
+                     
+                                <li>
+                                    <Link
+                                        onClick={closeDrawer}
+                                        tabIndex="-1"
+                                        to="speedmath"
+                                        className="aff"
+                                    >
+                                        SpeedMath
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link
+                                        onClick={closeDrawer}
+                                        tabIndex="-1"
+                                        to="2048"
+                                        className="aff"
+                                    >
+                                        2048
+                                    </Link>
+                                </li>
+
+                                {/* <li>
+                                    <Link onClick={closeDrawer} tabIndex="-1" to="math">
+                                        MathMate
+                                    </Link>
+                                </li>
+                             */}
+                        <li>
+                                    <Link onClick={closeDrawer} tabIndex="-1" to="sudoku">
+                                        Sudoku
+                                    </Link>
+                                </li>
+                            </ul>
+                        </li> 
                         <li>
                             <Link onClick={closeDrawer} tabIndex="-1" to="gallery" className={pathname ==="gallery" ? "active-ul" : ""}>
                                 Gallery
                             </Link>
                         </li>
                         <li>
-                            <Link onClick={closeDrawer} tabIndex="-1" to="speedmath">
-                                SpeedMath
-                            </Link>
-                        </li>
-                        <li>
-                            <Link onClick={closeDrawer} tabIndex="-1" to="math">
-                                MathMate
-                            </Link>
+                           
                         </li>
                     </ul>
                 </div>

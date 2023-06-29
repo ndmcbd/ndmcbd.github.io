@@ -23,6 +23,8 @@ import Team from "./Components/Team";
 import Ca from "./Components/Ca";
 import Math from "./Components/Math";
 import SpeedMath from "./Components/SpeedMath";
+import Game2048  from "./Components/2048/newBoard";
+import Sudoku  from "./Components/Sudoku/newGame";
 
 function App() {
     const { pathname } = useLocation();
@@ -80,6 +82,8 @@ function App() {
                 <Route path="dev" element={<Developers />} />
                 <Route path="math" element={<Math />} />
                 <Route path="speedmath" element={<SpeedMath />} />
+                <Route path="2048" element={<Game2048 />} />
+                <Route path="sudoku" element={<Sudoku />} />
             </Routes>
 
             <Footer />
